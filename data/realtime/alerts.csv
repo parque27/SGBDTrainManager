@@ -1,0 +1,498 @@
+alert_id,operator,first_seen,last_seen,active_start,active_end,header,description,language,live
+fgc:INCIDENCE_AB_3322,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_AE_3521,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_AL_920,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_BO_1140,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_CB_3720,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_CG_1321,fgc,2026-11-03T07:05:00Z,2026-11-03T15:20:00Z,2026-11-03T14:44:05Z,,"El servei de trens amb destinació Pl. Espanya funciona amb retards de fins a 8 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_CL_1422,fgc,2026-11-03T07:05:00Z,2026-11-03T15:20:00Z,2026-11-03T14:44:05Z,,"El servei de trens amb destinació Pl. Espanya funciona amb retards de fins a 8 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_CO_1042,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_CR_1621,fgc,2026-11-03T07:05:00Z,2026-11-03T07:20:00Z,2026-11-03T07:02:47Z,,"El servei de trens amb destinació Pl. Espanya funciona amb retards de fins a 7 minuts, per incidència operativa",,ca,true
+fgc:INCIDENCE_EU_523,fgc,2026-11-03T07:05:00Z,2026-11-04T07:10:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_GO_641,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_IC_440,fgc,2026-11-03T07:05:00Z,2026-11-04T07:10:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_LH_841,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_MA_4022,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_MB_4122,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_MG_340,fgc,2026-11-03T07:05:00Z,2026-11-04T07:10:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_ML_1221,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_MO_3640,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_OL_3420,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_QC_1724,fgc,2026-11-03T07:05:00Z,2026-11-03T07:20:00Z,2026-11-03T07:02:47Z,,"El servei de trens amb destinació Pl. Espanya funciona amb retards de fins a 7 minuts, per incidència operativa",,ca,true
+fgc:INCIDENCE_SP_721,fgc,2026-11-03T07:05:00Z,2026-11-04T07:00:00Z,2026-11-04T06:54:04Z,,"Els trens amb destinació Pl. Espanya circulen amb horaris alterats però mantenint les freqüències de pas habituals, a causa d'una avaria d'instal.lacions .",,ca,true
+fgc:INCIDENCE_SV_3822,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:INCIDENCE_VH_1522,fgc,2026-11-03T07:05:00Z,2026-11-03T07:25:00Z,2026-11-03T07:02:47Z,,"El servei de trens amb destinació Pl. Espanya funciona amb retards de fins a 7 minuts, per incidència operativa",,ca,true
+fgc:INCIDENCE_VI_3923,fgc,2026-11-03T16:55:00Z,2026-11-03T19:20:00Z,2026-11-03T16:51:35Z,,"Servei de trens de la línia R5 amb retards de fins a 6 minuts, per avaria a les instal.lacions. Disculpin les molèsties. Gràcies.",,ca,true
+fgc:OBSERVATIONS_A0076_BN,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_GR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_MN,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_PC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_PR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_SG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_SR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0076_TT,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_BN,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_GR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_MN,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_PC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_PR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_SG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_SR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_A0102_TT,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_D0063_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0063_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_EN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_FN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_HG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_MS,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_NA,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_RB,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_TR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0162_VP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_EN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_FN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_HG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_MS,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_NA,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_RB,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_TR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0164_VP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_D0401_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0031_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Segon cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0031_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0045_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0045_VO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0144_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_BT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_CF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_CT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_NO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_PJ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_PN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_SJ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_SQ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_UN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0144_VO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Últim cotxe reservat escolar,,ca,true
+fgc:OBSERVATIONS_F0160_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_BT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_CF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_CT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_NO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_PJ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_PN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_SJ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_SQ,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_UN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0160_VO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos primers cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_BN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_GR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_LF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_LP,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_MN,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_PC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_PF,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_PR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_SC,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_SG,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_SR,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_TT,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_VD,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_VL,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_F0401_VO,fgc,2026-11-02T02:10:00Z,2026-11-06T22:55:00Z,2026-11-06T02:02:23Z,2026-11-07T02:00:00Z,Dos últims cotxes reservats escolars,,ca,true
+fgc:OBSERVATIONS_M0093_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_CG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_CL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_CR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_MC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_ME,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_MV,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_PA,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_PL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_QC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_SA,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0093_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0093_VH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Igualada.,,ca,true
+fgc:OBSERVATIONS_M0095_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_CG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_CL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_CR,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_MC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_ME,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_MV,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_PA,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_PL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_QC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_SA,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0095_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa-Baixador.,,ca,true
+fgc:OBSERVATIONS_M0095_VH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0101_PE,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T05:11:43Z,2026-11-02T02:00:00Z,Els tres primers cotxes,,ca,true
+fgc:OBSERVATIONS_M0123_AL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_BO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_CG,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_CL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_CO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_CR,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_EU,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_GO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_IC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_LH,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_MC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_ME,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_MG,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_ML,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_MV,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_PA,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_PE,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_PL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_QC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_SA,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_SP,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0123_VH,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Igualada,,ca,true
+fgc:OBSERVATIONS_M0125_AL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_BO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_CG,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_CL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_CO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_CR,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_EU,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_GO,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_IC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_LH,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_MC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_ME,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_MG,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_ML,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_MV,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_PA,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_PE,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_PL,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_QC,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_SA,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_M0125_SP,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús Manresa,,ca,true
+fgc:OBSERVATIONS_M0125_VH,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T02:01:53Z,2026-11-02T02:00:00Z,Enllaç amb autobús amb destinació Manresa Baixador,,ca,true
+fgc:OBSERVATIONS_N0401_PE,fgc,2026-11-04T04:05:00Z,2026-11-05T02:00:00Z,2026-11-04T04:00:08Z,2026-11-05T02:00:00Z,Els tres primers cotxes.,,ca,true
+fgc:OBSERVATIONS_N0405_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0405_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T05:16:54Z,2026-11-07T02:00:00Z,Els tres primers cotxes . EnEnllaç amb el tren Cremellera de Montserrat a Monistrol,,ca,true
+fgc:OBSERVATIONS_N0405_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0409_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0413_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0415_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0417_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0419_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0423_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0427_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0431_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0435_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_AL,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_BO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_CO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_EU,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_GO,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_IC,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_LH,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_MG,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_ML,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_PE,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_N0439_SP,fgc,2026-11-02T02:05:00Z,2026-11-06T22:55:00Z,2026-11-06T02:01:34Z,2026-11-07T02:00:00Z,Enllaç amb el tren Cremallera de Montserrat a Monistrol.,,ca,true
+fgc:OBSERVATIONS_O0111_PE,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T05:11:00Z,2026-11-02T02:00:00Z,Els tres primers cotxees,,ca,true
+fgc:OBSERVATIONS_P0409_PE,fgc,2026-11-02T06:50:00Z,2026-11-03T02:00:00Z,2026-11-02T06:44:40Z,2026-11-03T02:00:00Z,Els tres primers cotxes.,,ca,true
+fgc:OBSERVATIONS_V0009_PE,fgc,2026-11-02T06:25:00Z,2026-11-03T02:00:00Z,2026-11-02T06:20:36Z,2026-11-03T02:00:00Z,Els tres primers cotxes.,,ca,true
+fgc:OBSERVATIONS_V0101_PE,fgc,2026-11-01T23:00:00Z,2026-11-02T02:00:00Z,2026-11-01T05:10:11Z,2026-11-02T02:00:00Z,Els tres primers cotxes,,ca,true
+renfe:AVISO_518187,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-06T15:13:00Z,,,Servei alternatiu per carretera en tot el seu recorregut.,es,false
+renfe:AVISO_518298,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T05:42:00Z,,,"Per causes alienes a Rodalies no es pot garantir la prestació del servei. Demanem disculpes als nostres usuaris i recomanem que utilitzin mitjans de transport alternatius.
+",es,false
+renfe:AVISO_518323,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T05:41:00Z,,,"Per causes alienes a Rodalies no es pot garantir la prestació del servei. Demanem disculpes als nostres usuaris i recomanem que utilitzin mitjans de transport alternatius.
+",es,false
+renfe:AVISO_518332,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T06:30:00Z,,,Circulació per via única entre Sant Vicenç de Calders i Cunit a causa d'una incidència a la infraestructura provocada per les intenses pluges d'ahir. Es manté el servei ferroviari entre Cunit i Barcelona Estació de França.,es,false
+renfe:AVISO_518337,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T07:23:00Z,,,Circulació ferroviària entre la Garriga i Puigcerdà/La Tor de Querol amb afectacions. S'estableix un servei alternatiu per carretera entre Ripoll i Puigcerdà i entre Fabra i Puig i Puigcerdà.,es,false
+renfe:AVISO_518345,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T06:29:00Z,,,Circulació ferroviària a tot el recorregut.,es,false
+renfe:AVISO_518348,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T06:38:00Z,,,Circulació ferroviària entre L'Hospitalet de Llobregat i Blanes fora del seu horari habitual. S'estableix un servei alternatiu per carretera entre Blanes i Maçanet-Massanes.,es,false
+renfe:AVISO_518352,renfe,2026-11-01T23:00:00Z,2026-11-04T16:48:00Z,2026-10-07T07:02:00Z,,,Sense servei ferroviari,es,false
+renfe:AVISO_521806,renfe,2026-11-04T16:49:00Z,2026-11-06T22:59:00Z,2026-10-25T07:04:00Z,,,Servei ferroviari entre Montcada Bifurcació i Cerdanyola Universitat. El tram entre Fabra i Puig i Montcada Bifurcació es realitza mitjançant els serveis de la línia R4.,es,true
+renfe:AVISO_521807,renfe,2026-11-04T16:49:00Z,2026-11-06T22:59:00Z,2026-10-25T07:06:00Z,,,Circulació ferroviària entre Lleida Pirineus i Manresa. El tram entre Manresa i Terrassa Estació del Nord es realitza mitjançant els serveis de la línia R4.,es,true
+renfe:AVISO_521823,renfe,2026-11-04T16:49:00Z,2026-11-06T22:59:00Z,2026-10-25T07:02:00Z,,,"Circulació ferroviària entre la Garriga i Puigcerdà/La Tor de Querol. Servei alternatiu per carretera entre Ripoll - Puigcerdà, i entre Fabra i Puig - Puigcerdà.",es,true
+renfe:AVISO_521824,renfe,2026-11-04T16:49:00Z,2026-11-06T22:59:00Z,2026-10-25T07:05:00Z,,,"Servei ferroviari entre Lleida Pirineus i les Borges Blanques, i entre la Plana Picamoixons i Barcelona Estació de França. Servei alternatiu per carretera entre Lleida Pirineus i La Plana Picamoixons.",es,true
+renfe:AVISO_522941,renfe,2026-11-04T16:49:00Z,2026-11-06T22:59:00Z,2026-10-30T12:58:00Z,,,"#NOUS HORARIS# A partir del 31-10-26, entraran en vigor nous horaris en la línea C6. Per a poder planificar el seu viatge sense inconvenients, pot consultar els horaris en la nostra web: https://www.renfe.com/es/es/cercanias/cercanias-valencia/horarios#/buscar",es,true
+renfe:AVISO_524030,renfe,2026-11-04T16:49:00Z,2026-11-04T22:59:00Z,2026-11-04T16:03:00Z,,,"Un cop resolta l'avaria d'un tren de mercaderies d'una empresa aliena a Renfe entre Martorell Central i Sant Sadurní d'Anoia, es restableix la circulació per ambdues vies, amb demores que poden superar els 30 minuts.",es,true
+renfe:AVISO_524033,renfe,2026-11-04T16:49:00Z,2026-11-04T19:55:00Z,2026-11-04T16:10:00Z,,,Circulació normalitzada.,es,true
+renfe:AVISO_524037,renfe,2026-11-04T16:51:00Z,2026-11-04T18:15:00Z,2026-11-04T16:47:00Z,,,"Línia C6. Tren amb eixida prevista a les 17:20h de l'estació de València Nord amb destinació Castelló, efectua la seua eixida amb 18 minuts de retard. 			",es,true
+renfe:AVISO_524044,renfe,2026-11-04T16:49:00Z,2026-11-04T17:00:00Z,2026-11-04T14:48:00Z,,,"Tren 15013 Barcelona-Estació de França 15:15 - Reus 17:03 circula amb 28 minuts de demora a causa d'una incidència tècnica del propi tren, ja resolta.",es,true
+renfe:AVISO_524061,renfe,2026-11-04T18:35:00Z,2026-11-04T19:50:00Z,2026-11-04T18:31:00Z,,,"Línia C6. Tren amb eixida prevista a les 19:03h de l'estació de Castelló amb destinació València Nord, circula per Vila-real amb 15 minuts de retard. 			",es,true
+renfe:AVISO_524079,renfe,2026-11-04T19:53:00Z,2026-11-04T20:05:00Z,2026-11-04T19:49:00Z,,,"Línia C6. Tren amb eixida prevista a les 20:50h de l'estació de València Nord amb destinació Castelló, hui no circula. ",es,true
+renfe:AVISO_524092,renfe,2026-11-04T21:07:00Z,2026-11-04T22:10:00Z,2026-11-04T21:05:00Z,,,"Línia C6. Tren amb eixida prevista a les 21:20h de l'estació de València Nord amb destinació Castelló, circula per València Cabanyal amb 15 minuts de retard. 			",es,true
+renfe:AVISO_524099,renfe,2026-11-05T06:15:00Z,2026-11-05T08:10:00Z,2026-11-05T06:14:00Z,,,"Línia C6. Tren amb eixida prevista a les 7:50h de l'estació de València Nord amb destinació Castelló, hui no circula. 			",es,true
+renfe:AVISO_524100,renfe,2026-11-05T06:17:00Z,2026-11-05T07:13:00Z,2026-11-05T06:15:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:20h de l'estació de Castelló amb destinació València Nord, hui no circula. 			",es,true
+renfe:AVISO_524168,renfe,2026-11-05T07:20:00Z,2026-11-05T22:59:00Z,2026-11-05T07:18:00Z,,,"A causa de la vaga de l&#146;SNCF, avui no es garanteix el servei ferroviari entre Puigcerdà i La Tor de Querol. El servei alternatiu per carretera es presta segons la programació prevista.",es,true
+renfe:AVISO_524172,renfe,2026-11-05T07:58:00Z,2026-11-05T08:57:00Z,2026-11-05T07:56:00Z,,,Circulació restablerta segons l'oferta habitual un cop resolta la incidència a la infraestructura a Castellbisbal.,es,true
+renfe:AVISO_524174,renfe,2026-11-05T08:09:00Z,2026-11-05T09:45:00Z,2026-11-05T08:07:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:20h de l'estació de Castelló amb destinació València Nord, hui no circula.",es,true
+renfe:AVISO_524182,renfe,2026-11-05T08:57:00Z,2026-11-05T09:59:00Z,2026-11-05T08:56:00Z,,,Circulació amb demores de 15 minuts de mitjana a causa d'una incidència per causes operatives.,es,true
+renfe:AVISO_524184,renfe,2026-11-05T06:51:00Z,2026-11-05T07:50:00Z,2026-11-05T06:49:00Z,,,"Línia C6. Tren amb eixida prevista a les 7:20h de l'estació de València Nord amb destinació Castelló, circula per València Font de Sant Lluís amb 16 minuts de retard. 			",es,true
+renfe:AVISO_524187,renfe,2026-11-05T07:15:00Z,2026-11-05T08:20:00Z,2026-11-05T07:13:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:20h de l'estació de Castelló amb destinació València Nord, finalment si circula.",es,true
+renfe:AVISO_524190,renfe,2026-11-05T07:50:00Z,2026-11-05T22:59:00Z,2026-11-05T07:49:00Z,,,"A causa de la vaga de l'SNCF, avui no es presta el servei ferroviari entre Portbou i Cerbère.",es,true
+renfe:AVISO_524195,renfe,2026-11-05T09:50:00Z,2026-11-05T10:20:00Z,2026-11-05T09:46:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:00h de l'estació de Castelló amb destinació València Nord, circula per València Font de Sant Lluís amb 30 minuts de retard. Atenció mèdica a viatger.			",es,true
+renfe:AVISO_524197,renfe,2026-11-05T11:52:00Z,2026-11-05T12:20:00Z,2026-11-05T11:51:00Z,,,"Línia C6. Tren amb eixida prevista a les 11:35h de l'estació de Castelló amb destinació València Nord, circula per Puçol amb 25 minuts de retard. 			",es,true
+renfe:AVISO_524198,renfe,2026-11-05T12:05:00Z,2026-11-05T14:55:00Z,2026-11-05T12:03:00Z,,,"Línia C6. Tren amb eixida prevista a les 14:35h de l'estació de Castelló amb destinació València Nord, hui no circula. 			",es,true
+renfe:AVISO_524204,renfe,2026-11-05T09:17:00Z,2026-11-05T10:30:00Z,2026-11-05T09:14:00Z,,,Tren 18122 Tortosa 09.&#8203;11 h - Barcelona Estació de França 11.&#8203;54 h finalitza el seu recorregut a l'Ampolla-Perelló-Deltebre a causa d'una incidència tècnica del propi tren.,es,true
+renfe:AVISO_524206,renfe,2026-11-05T10:06:00Z,2026-11-05T22:59:00Z,2026-11-05T10:04:00Z,,,"A causa d'una incidència a la infraestructura entre Arc de Triomf i El Clot, els trens circulen amb demores que poden superar els 15 minuts.",es,true
+renfe:AVISO_524208,renfe,2026-11-05T10:18:00Z,2026-11-05T11:30:00Z,2026-11-05T10:16:00Z,,,"Línia C6. Tren amb eixida prevista a les 10:50h de l'estació de València Nord amb destinació Castelló, efectua la seua eixida amb 23 minuts de retard. 			",es,true
+renfe:AVISO_524210,renfe,2026-11-05T10:33:00Z,2026-11-05T12:48:00Z,2026-11-05T10:29:00Z,,,"Línia C6. Tren amb eixida prevista a les 12:20h de l'estació de València Nord amb destinació Castelló, hui no circula. 			",es,true
+renfe:AVISO_524223,renfe,2026-11-05T13:43:00Z,2026-11-05T17:17:00Z,2026-11-05T13:42:00Z,,,Tren 15011 Barcelona-Estació de França 14.15 h - Reus 16.03 h iniciarà el seu recorregut amb 30 minuts de demora a causa d'una incidència operativa.,es,true
+renfe:AVISO_524227,renfe,2026-11-05T14:09:00Z,2026-11-05T15:30:00Z,2026-11-05T14:07:00Z,,,"Línia C6. Tren amb eixida prevista a les 14:*45h de l'estació de València *Nord amb destinació Castelló, efectua la seua eixida amb 16 minuts de retard. 		",es,true
+renfe:AVISO_524240,renfe,2026-11-05T17:34:00Z,2026-11-05T18:35:00Z,2026-11-05T17:25:00Z,,,Circulació amb demores que poden superar els 15 minuts a causa d'una incidència a la infraestructura entre Barcelona-Passeig de Gràcia i Barcelona-El Clot.,es,true
+renfe:AVISO_524247,renfe,2026-11-05T15:17:00Z,2026-11-05T22:59:00Z,2026-11-05T15:12:00Z,,,"A causa d'una incidència a la infraestructura a Viladecavalls, els trens poden romandre aturats més temps de l'habitual i veure augmentat el seu temps de recorregut, amb demores que poden superar els 20 minuts.",es,true
+renfe:AVISO_524281,renfe,2026-11-05T20:02:00Z,2026-11-05T22:59:00Z,2026-11-05T20:00:00Z,,,"A causa d'una incidència a la infraestructura entre Vilanova i la Geltrú i Sitges, els trens poden romandre aturats a mesura que s'apropin al tram afectat, amb demores que poden superar els 20 minuts.",es,true
+renfe:AVISO_524313,renfe,2026-11-06T06:16:00Z,2026-11-06T08:10:00Z,2026-11-06T06:13:00Z,,,"Línia C6. Tren amb eixida prevista a les 7:50h de l'estació de València Nord amb destinació Castelló, hui no circula. 			",es,true
+renfe:AVISO_524314,renfe,2026-11-06T06:20:00Z,2026-11-06T09:45:00Z,2026-11-06T06:18:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:20h de l'estació de Castelló amb destinació València Nord, hui no circula. 			",es,true
+renfe:AVISO_524321,renfe,2026-11-06T07:02:00Z,2026-11-06T11:11:00Z,2026-11-06T06:59:00Z,,,Circulació amb demores de 25 minuts de mitjana a causa d'una incidència tècnica d'un tren.,es,true
+renfe:AVISO_524347,renfe,2026-11-06T05:49:00Z,2026-11-06T07:15:00Z,2026-11-06T05:46:00Z,,,"Línia C6. Tren amb eixida prevista a les 6:20h de l'estació de València Nord amb destinació Castelló, circula per València Font de Sant Lluís amb 16 minuts de retard. 			",es,true
+renfe:AVISO_524357,renfe,2026-11-06T06:39:00Z,2026-11-06T07:52:00Z,2026-11-06T06:37:00Z,,,Circulació amb demores de 15 minuts de mitjana a causa d'una incidència per causes operatives.,es,true
+renfe:AVISO_524358,renfe,2026-11-06T06:45:00Z,2026-11-06T08:57:00Z,2026-11-06T06:38:00Z,,,"#AVÍS Línia C6# A causa d'una avaria de la infraestructura en Vila - Real, se circula per via única entre Burriana i Castelló. Es poden produir retards en els dos sentits del trajecte. Continuarem informant.",es,true
+renfe:AVISO_524371,renfe,2026-11-06T07:41:00Z,2026-11-06T08:03:00Z,2026-11-06T07:39:00Z,,,"Per una incidència a l'estació de Passeig de Gràcia, els trens no faran parada en aquesta estació. Es recomana consultar el servei alternatiu a través de: mou-te.gencat.cat/itinerary",es,true
+renfe:AVISO_524374,renfe,2026-11-06T07:54:00Z,2026-11-06T22:59:00Z,2026-11-06T07:52:00Z,,,Circulació amb demores que poden superar els 30 minuts de mitjana a causa d'una incidència operativa.,es,true
+renfe:AVISO_524385,renfe,2026-11-06T07:29:00Z,2026-11-06T08:02:00Z,2026-11-06T07:26:00Z,,,"Per una incidència a l'estació de Passeig de Gràcia, els trens no faran parada en aquesta estació. Es recomana consultar el servei alternatiu a través de: mou-te.gencat.cat/itinerary",es,true
+renfe:AVISO_524389,renfe,2026-11-06T08:03:00Z,2026-11-06T18:10:00Z,2026-11-06T08:00:00Z,,,"Un cop resolta la incidència a l'estació de Passeig de Gràcia, els trens tornen a efectuar parada en aquesta estació.",es,true
+renfe:AVISO_524394,renfe,2026-11-06T08:30:00Z,2026-11-06T10:00:00Z,2026-11-06T08:27:00Z,,,"Línia C6. Tren amb eixida prevista a les 9:00h de l'estació de Castelló amb destinació València Nord, efectua la seua eixida amb 20 minuts de retard. 			",es,true
+renfe:AVISO_524402,renfe,2026-11-06T08:57:00Z,2026-11-06T10:12:00Z,2026-11-06T08:54:00Z,,,#AVIS Línia C6# Avaria de la infraestructura en Vila - Real ha sigut solucionada. ,es,true
+renfe:AVISO_524403,renfe,2026-11-06T08:05:00Z,2026-11-06T08:20:00Z,2026-11-06T08:01:00Z,,,"Línia C6. Tren amb eixida prevista a les 7:45h de l'estació de València Nord amb destinació Castelló, circula per Moncofa amb 17 minuts de retard. 			",es,true
+renfe:AVISO_524414,renfe,2026-11-06T10:15:00Z,2026-11-06T12:48:00Z,2026-11-06T10:12:00Z,,,"Línia C6. Tren amb eixida prevista a les 12:20h de l'estació de València Nord amb destinació Castelló, hui no circula. 			",es,true
+renfe:AVISO_524432,renfe,2026-11-06T11:13:00Z,2026-11-06T22:59:00Z,2026-11-06T11:11:00Z,,,Circulació amb demores de 20 minuts de mitjana a causa d'una incidència operativa.,es,true
+renfe:AVISO_524438,renfe,2026-11-06T12:13:00Z,2026-11-06T14:55:00Z,2026-11-06T12:08:00Z,,,"Línia C6. Tren amb eixida prevista a les 14:35h de l'estació de Castelló amb destinació València Nord, hui no circula. 			",es,true
+renfe:AVISO_524440,renfe,2026-11-06T12:41:00Z,2026-11-06T13:50:00Z,2026-11-06T12:39:00Z,,,"Línia C6. Tren amb eixida prevista a les 12:50h de l'estació de València Nord amb destinació Castelló, circula per Albuixech amb 28 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524464,renfe,2026-11-06T13:01:00Z,2026-11-06T13:36:00Z,2026-11-06T12:57:00Z,,,"#AVÍS# Línia C6# A causa d'una avaria de la infraestructura a València Font de Sant Lluis, poden produir-se retards en els dos sentits de la circulació. Tècnics treballen per a solucionar-ho. Continuarem informant.",es,true
+renfe:AVISO_524466,renfe,2026-11-06T13:24:00Z,2026-11-06T15:50:00Z,2026-11-06T13:22:00Z,,,"Línia C6. Tren amb eixida prevista a les 15:20h de l'estació de València Nord amb destinació Gandia, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524484,renfe,2026-11-06T13:07:00Z,2026-11-06T22:59:00Z,2026-11-06T13:04:00Z,,,"AVÍS# LÍNIA C6# A causa de l'avaria d'infraestructura a València Font de Sant Lluis, s'estan produint retards mitjans de 25 minuts. Disculpen les molèsties.",es,true
+renfe:AVISO_524486,renfe,2026-11-06T13:14:00Z,2026-11-06T15:43:00Z,2026-11-06T13:08:00Z,,,Circulació interrompuda Martorell-S. Sadurní per avaria de tren mercant aliè. 2 trens per hora i sentit Manresa - Martorell. Tren llançadora SV Calders-S. Sadurní. Transport alternatiu per carretera Martorell-S. Sadurní. Gestionant transport complementari SV Calders-Martorell.,es,true
+renfe:AVISO_524488,renfe,2026-11-06T13:38:00Z,2026-11-06T14:35:00Z,2026-11-06T13:35:00Z,,,"AVÍS# LÍNIA C6# Esmenada l'avaria en la infraestructura a València Font de Sant Lluis, els trens aniran recuperant gradualment la seua freqüència de pas habitual.",es,true
+renfe:AVISO_524499,renfe,2026-11-06T14:45:00Z,2026-11-06T16:00:00Z,2026-11-06T14:43:00Z,,,"Línia C6. Tren amb eixida prevista a les 15:05h de l'estació de Castelló amb destinació València Nord, circula per Vila-real amb 29 minuts de retard. Afectació tren anterior.			",es,true
+renfe:AVISO_524502,renfe,2026-11-06T14:51:00Z,2026-11-06T15:50:00Z,2026-11-06T14:49:00Z,,,"Línia C2. Tren amb eixida prevista a les 15:15h de l'estació de València Nord amb destinació l'Alcúdia, efectua la seua eixida amb 32 minuts de retard. Avaria de pas a nivell ja solucionada.			",es,true
+renfe:AVISO_524511,renfe,2026-11-06T15:17:00Z,2026-11-06T17:30:00Z,2026-11-06T15:15:00Z,,,"Línia C1. Tren amb eixida prevista a les 17:05h de l'estació de Castelló amb destinació València Nord, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524513,renfe,2026-11-06T15:23:00Z,2026-11-06T16:40:00Z,2026-11-06T15:21:00Z,,,"Línia C6. Tren amb eixida prevista a les 15:45h de l'estació de València Nord amb destinació Castelló, efectua la seua eixida amb 28 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524521,renfe,2026-11-06T15:39:00Z,2026-11-06T16:40:00Z,2026-11-06T15:38:00Z,,,"Línia C6. Tren amb eixida prevista a les 15:50h de l'estació de València Nord amb destinació Castelló, circula per El Puig amb 23 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524522,renfe,2026-11-06T15:40:00Z,2026-11-06T18:06:00Z,2026-11-06T15:29:00Z,,,Circulació per via única entre Martorell Central i Sant Sadurní d'Anoia a causa d'una avaria d'un tren de mercaderies aliè a Renfe.,es,true
+renfe:AVISO_524530,renfe,2026-11-06T15:38:00Z,2026-11-06T16:20:00Z,2026-11-06T15:36:00Z,,,"Línia C6. Tren amb eixida prevista a les 15:35h de l'estació de Castelló amb destinació València Nord, circula per Sagunto amb 15 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524535,renfe,2026-11-06T15:49:00Z,2026-11-06T16:41:00Z,2026-11-06T15:47:00Z,,,"Línia C6. Tren amb eixida prevista a les 17:35h de l'estació de Castelló amb destinació València Nord, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524536,renfe,2026-11-06T15:51:00Z,2026-11-06T18:00:00Z,2026-11-06T15:49:00Z,,,"Línia C6. Tren amb eixida prevista a les 17:20h de l'estació de València Nord amb destinació Castelló, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524540,renfe,2026-11-06T16:34:00Z,2026-11-06T18:20:00Z,2026-11-06T16:32:00Z,,,"Línia C6. Tren amb eixida prevista a les 17:50h de l'estació de València Nord amb destinació Castelló, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524541,renfe,2026-11-06T16:41:00Z,2026-11-06T18:05:00Z,2026-11-06T16:39:00Z,,,"Línia C6. Tren amb eixida prevista a les 17:35h de l'estació de Castelló amb destinació València Nord, finalmente si circula. Incidència operativa.			",es,true
+renfe:AVISO_524547,renfe,2026-11-06T16:32:00Z,2026-11-06T18:05:00Z,2026-11-06T16:30:00Z,,,"Línia C6. Tren amb eixida prevista a les 16:05h de l'estació de Castelló amb destinació València Nord, circula per Xilxes amb 60 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524549,renfe,2026-11-06T16:36:00Z,2026-11-06T19:05:00Z,2026-11-06T16:34:00Z,,,"Línia C6. Tren amb eixida prevista a les 18:35h de l'estació de Castelló amb destinació València Nord, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524553,renfe,2026-11-06T17:14:00Z,2026-11-06T18:30:00Z,2026-11-06T17:12:00Z,,,"Línia C2. Tren amb eixida prevista a les 17:50h de l'estació de València Nord amb destinació l'Alcúdia, efectua la seua eixida amb 19 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524557,renfe,2026-11-06T17:54:00Z,2026-11-06T20:00:00Z,2026-11-06T17:52:00Z,,,"Línia C6. Tren amb eixida prevista a les 19:30h de l'estació de Castelló amb destinació València Nord, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524559,renfe,2026-11-06T18:07:00Z,2026-11-06T22:59:00Z,2026-11-06T18:03:00Z,,,"Un cop resolta l'avaria d'un tren de mercaderies aliè a Renfe, es restableix la circulació per ambdues vies entre Martorell Central i Sant Sadurní d'Anoia. Es recuperen progressivament els horaris i freqüències habituals de pas.",es,true
+renfe:AVISO_524572,renfe,2026-11-06T18:22:00Z,2026-11-06T19:20:00Z,2026-11-06T18:21:00Z,,,"Línia C6. Tren amb eixida prevista a les 18:55h de l'estació de València Nord amb destinació Castelló, circula per X amb 18 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524582,renfe,2026-11-06T18:58:00Z,2026-11-06T20:00:00Z,2026-11-06T18:56:00Z,,,"Línia C6. Tren amb eixida prevista a les 19:15h de l'estació de València Nord amb destinació Castelló, circula per Puçol amb 15 minuts de retard. Avaria d'infraestructura en Valencia Font de Sant Lluis.			",es,true
+renfe:AVISO_524583,renfe,2026-11-06T18:45:00Z,2026-11-06T20:05:00Z,2026-11-06T18:44:00Z,,,"Línia C6. Tren amb eixida prevista a les 19:20h de l'estació de València Nord amb destinació Castelló, efectua la seua eixida amb 17 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524585,renfe,2026-11-06T18:53:00Z,2026-11-06T22:59:00Z,2026-11-06T18:51:00Z,,,"#AVÍS# Línia C6# A causa d'una avaria de la infraestructura a València Font de Sant Lluis, poden produir-se retards en els dos sentits de la circulació. Tècnics treballen per a solucionar-ho. Continuarem informant.",es,true
+renfe:AVISO_524587,renfe,2026-11-06T19:03:00Z,2026-11-06T20:20:00Z,2026-11-06T19:01:00Z,,,"Línia C6. Tren amb eixida prevista a les 19:50h de l'estació de València Nord amb destinació Castelló, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524602,renfe,2026-11-06T20:28:00Z,2026-11-06T21:30:00Z,2026-11-06T20:25:00Z,,,"#AVIS #Línia C6 - Avaria de la infraestructura a València Font de Sant Lluís ha sigut solucionada.
+",es,true
+renfe:AVISO_524605,renfe,2026-11-06T19:29:00Z,2026-11-06T22:00:00Z,2026-11-06T19:28:00Z,,,"Línia C6. Tren amb eixida prevista a les 21:35h de l'estació de Castelló amb destinació València Nord, hui no circula. Incidència operativa.			",es,true
+renfe:AVISO_524608,renfe,2026-11-06T19:55:00Z,2026-11-06T21:20:00Z,2026-11-06T19:54:00Z,,,"Línia C6. Tren amb eixida prevista a les 20:30h de l'estació de Castelló amb destinació València Nord, efectua la seua eixida amb 22 minuts de retard. Afectació tren anterior.			",es,true
+renfe:AVISO_524614,renfe,2026-11-06T21:51:00Z,2026-11-06T22:59:00Z,2026-11-06T21:48:00Z,,,"Línia C6. Tren amb eixida prevista a les 22:15h de l'estació de Castelló amb destinació València Nord, circula per Nules amb 19 minuts de retard. Incidència operativa.			",es,true
+renfe:AVISO_524623,renfe,2026-11-06T20:54:00Z,2026-11-06T22:40:00Z,2026-11-06T20:52:00Z,,,"Línia C6. Tren amb eixida prevista a les 21:05h de l'estació de Castelló amb destinació València Nord, efectua la seua eixida amb 29 minuts de retard. Incidència operativa.			",es,true

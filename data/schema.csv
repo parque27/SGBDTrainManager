@@ -1,0 +1,137 @@
+file,column,type,nullable,unit,description,links_to,natural_key,example
+network/stations.csv.gz,station_id,text,false,,"Station id, operator-prefixed (`renfe:...` or `fgc:...`). RENFE uses its 5-digit code, FGC its 2-letter code.",,true,fgc:AB
+network/stations.csv.gz,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+network/stations.csv.gz,code,text,false,,"The operator's own station code, without prefix.",,false,AB
+network/stations.csv.gz,name,text,false,,Station name from the operator's timetable (GTFS stops.txt).,,false,Abrera
+network/stations.csv.gz,lat,double precision,false,degrees,"Latitude, WGS84 (SRID 4326), 6 decimals.",,false,41.522561
+network/stations.csv.gz,lon,double precision,false,degrees,"Longitude, WGS84 (SRID 4326), 6 decimals.",,false,1.906805
+network/stations.csv.gz,municipality,text,true,,"Municipality from RENFE's station list (estaciones.csv). Empty when unknown, always for FGC.",,false,PUENTE GENIL
+network/stations.csv.gz,province,text,true,,"Province from RENFE's station list (estaciones.csv). Empty when unknown, always for FGC.",,false,CÓRDOBA
+network/stations.csv.gz,interchange_id,text,true,,"Shared by stations of different operators that are the same place (same normalised name, within 300 m). Empty when there is no counterpart.",,false,ix:fgc:EN
+network/stations.csv.gz,source,text,false,,Timetable file the station comes from: `renfe_gtfs` or `fgc_gtfs`.,,false,fgc_gtfs
+network/routes.csv,route_id,text,false,,"Route (line) id, operator-prefixed (`renfe:...` or `fgc:...`).",,true,fgc:FV
+network/routes.csv,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+network/routes.csv,service,text,false,,"`rodalies`, `regional`, `long_distance` or `fgc`.",,false,fgc
+network/routes.csv,short_name,text,false,,"Public line name, for example `R1`, `S1` or `REGIONAL`.",,false,FV
+network/routes.csv,long_name,text,false,,"Route description, usually its end stations.",,false,Funicular de Vallvidrera
+network/routes.csv,color,text,false,,Line colour as 6 hex digits without `#`.,,false,0A57A3
+network/trips.csv.gz,trip_id,text,false,,"Run id `<operator>:<raw trip id>@<service date>`. Raw timetable ids repeat on several days, so the service date is part of the id.",,true,fgc:624ddab200727612a612|1f28c4e006@2026-11-02
+network/trips.csv.gz,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+network/trips.csv.gz,route_id,text,false,,"Route (line) id, operator-prefixed (`renfe:...` or `fgc:...`).",routes.route_id,false,fgc:RL1
+network/trips.csv.gz,service_date,date,false,,Madrid calendar date the timetable runs on.,,false,2026-11-02
+network/trips.csv.gz,train_number,text,true,,Public train number (RENFE). Empty for FGC.,,false,00437
+network/trips.csv.gz,headsign,text,false,,Destination shown on the train.,,false,Balaguer
+network/trips.csv.gz,direction_id,integer,true,,"GTFS direction, 0 or 1.",,false,0
+network/trips.csv.gz,shape_id,text,true,,Route shape. Empty when the timetable has none (RENFE long distance has no shapes).,shapes.shape_id,false,fgc:100059
+network/trips.csv.gz,timetable_snapshot,date,false,,Date of the GTFS snapshot used (the same day as service_date).,,false,2026-11-02
+network/trips.csv.gz,source_trip_id,text,false,,"Trip id exactly as in the operator's GTFS trips.txt, without prefix or date.",,false,624ddab200727612a612|1f28c4e006
+network/trips.csv.gz,feed,text,false,,"Timetable file: `cercanias` (RENFE Cercanias GTFS), `ld` (RENFE long/medium distance GTFS) or `fgc`.",,false,fgc
+network/stop_times.csv.gz,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,true,fgc:624ddab200727612a612|1f28c4e006@2026-11-02
+network/stop_times.csv.gz,stop_sequence,integer,false,,"Order of the stop within the trip (GTFS stop_sequence, increasing, not always 1, 2, 3).",,true,1
+network/stop_times.csv.gz,station_id,text,false,,"Station id, operator-prefixed (`renfe:...` or `fgc:...`).",stations.station_id,false,fgc:LE
+network/stop_times.csv.gz,arrival_time,timestamptz,false,,"Timetabled arrival, UTC, ISO 8601 with Z. Converted from GTFS local time, including times after 24:00.",,false,2026-11-02T20:30:00Z
+network/stop_times.csv.gz,departure_time,timestamptz,false,,"Timetabled departure, UTC, ISO 8601 with Z.",,false,2026-11-02T20:30:00Z
+network/stop_times.csv.gz,inside_boundary,boolean,false,,true when the station lies inside the buffered Catalonia boundary.,,false,true
+network/shapes.csv.gz,shape_id,text,false,,"Shape id, operator-prefixed (`renfe:...` or `fgc:...`).",,true,fgc:100003
+network/shapes.csv.gz,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+network/shapes.csv.gz,geometry_wkt,text,false,,"WKT LINESTRING or MULTILINESTRING, lon lat order, SRID 4326.",,false,"LINESTRING (2.17006 41.38575, 2.16973 41.385601, 2.16945 ..."
+network/tracks.csv.gz,way_id,text,false,,"OpenStreetMap way id, `osm:<id>`.",,true,osm:1000255835
+network/tracks.csv.gz,railway,text,false,,"OpenStreetMap railway tag: `rail`, `narrow_gauge`, `subway` or `tram`.",,false,subway
+network/tracks.csv.gz,name,text,true,,Line name from OpenStreetMap.,,false,Línia Lleida-la Pobla de Segur
+network/tracks.csv.gz,infrastructure_operator,text,true,,"OpenStreetMap operator tag: who manages the track (for example Adif or FGC), not the train operator. Replaces the spec's `operator` column to avoid that confusion.",,false,Transports Metropolitans de Barcelona
+network/tracks.csv.gz,gauge,text,true,mm,"Track gauge as tagged, for example `1668`; can list several values separated by `;`.",,false,1435
+network/tracks.csv.gz,electrified,text,true,,"OpenStreetMap electrified tag, for example `contact_line` or `no`.",,false,contact_line
+network/tracks.csv.gz,voltage,text,true,V,Electrification voltage as tagged.,,false,1500
+network/tracks.csv.gz,maxspeed_kmh,integer,true,km/h,Speed limit as tagged.,,false,140
+network/tracks.csv.gz,usage,text,true,,"OpenStreetMap usage tag: `main`, `branch`, `industrial`, `freight` or `tourism`.",,false,branch
+network/tracks.csv.gz,geometry_wkt,text,false,,"WKT LINESTRING, lon lat order, SRID 4326.",,false,"LINESTRING (2.1331922 41.323721, 2.1334803 41.3241938, 2...."
+realtime/positions/*.csv.gz,time,timestamptz,false,,"Minute of the observation, UTC, ISO 8601 with Z.",,true,2026-11-01T23:00:00Z
+realtime/positions/*.csv.gz,train_id,text,false,,"Train: Rodalies `renfe:<trip>` (one running train), long distance `renfe:<train number>`, FGC `fgc:<record id>` (one run of the timetable, not a physical unit). With time, the natural key.",,true,renfe:15023
+realtime/positions/*.csv.gz,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,renfe
+realtime/positions/*.csv.gz,vehicle_id,text,true,,"Vehicle as published: RENFE vehicle id, FGC unit (`ut`). Empty when not published.",,false,15023
+realtime/positions/*.csv.gz,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,false,renfe:1502312026-10-31@2026-11-02
+realtime/positions/*.csv.gz,other_trip_ids,text,true,,"Long distance only: other trip ids the same train was published under in the same minute, `;`-separated.",,false,renfe:0330222026-11-01@2026-11-02
+realtime/positions/*.csv.gz,route_id,text,true,,"Route (line) id, operator-prefixed (`renfe:...` or `fgc:...`).",routes.route_id,false,renfe:7940071400VRE
+realtime/positions/*.csv.gz,lat,double precision,false,degrees,"Latitude, WGS84 (SRID 4326), 6 decimals.",,false,41.111366
+realtime/positions/*.csv.gz,lon,double precision,false,degrees,"Longitude, WGS84 (SRID 4326), 6 decimals.",,false,1.253342
+realtime/positions/*.csv.gz,movement,text,false,,"`moving`, `stopped_station` (still within the station radius) or `stopped_line` (still between stations).",,false,moving
+realtime/positions/*.csv.gz,station_id,text,true,,Station the train is stopped at; only when movement is `stopped_station`.,stations.station_id,false,fgc:SR
+realtime/positions/*.csv.gz,next_station_id,text,true,,Next station as published by the feed. It can lag behind the train.,stations.station_id,false,renfe:71401
+realtime/positions/*.csv.gz,delay_s,integer,true,s,Delay of the trip in this minute (positive = late). Empty when not reported.,,false,2400
+realtime/positions/*.csv.gz,speed_kmh,double precision,true,km/h,"Average speed since the train's previous observed position. Empty when the row is not a new observation or starts a track (the train's first row, after more than 10 min absent, or at a `track_split` in data_issues).",,false,140.1
+realtime/positions/*.csv.gz,position_fixed,boolean,false,,true when cleaning corrected this position; the original is in data_issues.,,false,false
+realtime/positions/*.csv.gz,carried_forward,boolean,false,,true when the row repeats the previous minute's state because the feed did not change or could not be fetched.,,false,false
+realtime/positions/*.csv.gz,feed,text,false,,"Realtime feed the train comes from: `rodalies` (RENFE Cercanias/Rodalies feed, which also carries the regional lines), `ld` (RENFE long and medium distance feed) or `fgc` (FGC positions).",,false,ld
+realtime/positions/*.csv.gz,raw_trip_id,text,false,,Trip id exactly as the realtime feed published it (long distance ids embed a date that can differ from the timetable's).,,false,1502312026-10-31
+realtime/trip_delays.csv.gz,time,timestamptz,false,,"Minute, UTC, ISO 8601 with Z.",,true,2026-11-01T23:00:00Z
+realtime/trip_delays.csv.gz,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id). Long-distance trips missing from the Catalan timetable keep the same id form but have no trips row.",trips.trip_id,true,renfe:1502312026-10-31@2026-11-02
+realtime/trip_delays.csv.gz,delay_s,integer,true,s,"Delay, positive = late. Empty for `fgc_flag` rows.",,false,2400
+realtime/trip_delays.csv.gz,source,text,false,,"`renfe_trip` (RENFE trip delay), `renfe_stop` (RENFE stop delay), `fgc_computed` (FGC predicted minus timetabled time at the next stop) or `fgc_flag` (only FGC's on-time flag).",,false,renfe_trip
+realtime/trip_delays.csv.gz,on_time,boolean,true,,"FGC on-time flag (`en_hora`), only on `fgc_flag` rows.",,false,true
+realtime/stop_arrivals.csv.gz,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,true,fgc:625cdae2027432|602dc2e202@2026-11-06
+realtime/stop_arrivals.csv.gz,stop_sequence,integer,false,,"Stop order, as in stop_times.",,true,1
+realtime/stop_arrivals.csv.gz,station_id,text,false,,"Station id, operator-prefixed (`renfe:...` or `fgc:...`).",stations.station_id,false,fgc:MB
+realtime/stop_arrivals.csv.gz,scheduled_arrival,timestamptz,false,,"Timetabled arrival, UTC, ISO 8601 with Z.",,false,2026-11-06T06:19:00Z
+realtime/stop_arrivals.csv.gz,observed_arrival,timestamptz,true,,"Last prediction published before the train passed the stop, UTC, ISO 8601 with Z.",,false,2026-11-06T06:19:00Z
+realtime/stop_arrivals.csv.gz,delay_s,integer,true,s,observed_arrival minus scheduled_arrival.,,false,0
+realtime/stop_arrivals.csv.gz,skipped,boolean,false,,true when the feed marked the stop as skipped.,,false,false
+realtime/cancellations.csv,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,true,fgc:624ddab200727612a612|1f28c4e006@2026-11-02
+realtime/cancellations.csv,service_date,date,false,,Madrid calendar date of the trip.,,false,2026-11-02
+realtime/cancellations.csv,scope,text,false,,`trip` (whole trip) or `partial` (some stops skipped).,,false,trip
+realtime/cancellations.csv,first_seen,timestamptz,true,,"First minute the feed reported it, UTC, ISO 8601 with Z. Empty for `not_reported`.",,false,2026-11-04T08:40:00Z
+realtime/cancellations.csv,last_seen,timestamptz,true,,"Last minute the feed reported it, UTC, ISO 8601 with Z. Empty for `not_reported`.",,false,2026-11-04T08:40:00Z
+realtime/cancellations.csv,evidence,text,false,,"`feed_canceled` (the feed said so), `stops_skipped` (the feed skipped at least one stop) or `not_reported` (timetabled but never seen in any feed: low confidence).",,false,not_reported
+realtime/alerts.csv,alert_id,text,false,,"Alert id, operator-prefixed (`renfe:...` or `fgc:...`).",,true,fgc:INCIDENCE_AB_3322
+realtime/alerts.csv,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+realtime/alerts.csv,first_seen,timestamptz,false,,"First minute the alert was in the feed, UTC, ISO 8601 with Z.",,false,2026-11-03T16:55:00Z
+realtime/alerts.csv,last_seen,timestamptz,false,,"Last minute the alert was in the feed, UTC, ISO 8601 with Z.",,false,2026-11-03T19:20:00Z
+realtime/alerts.csv,active_start,timestamptz,false,,"Start of the period the alert says it applies to, UTC, ISO 8601 with Z.",,false,2026-11-03T16:51:35Z
+realtime/alerts.csv,active_end,timestamptz,true,,"End of that period, UTC, ISO 8601 with Z. Empty when open.",,false,2026-11-07T02:00:00Z
+realtime/alerts.csv,header,text,true,,Alert title. RENFE publishes none.,,false,Servei de trens de la línia R5 amb retards de fins a 6 mi...
+realtime/alerts.csv,description,text,true,,Alert text.,,false,Servei alternatiu per carretera en tot el seu recorregut.
+realtime/alerts.csv,language,text,false,,Language of header and description: `ca` or `es`.,,false,ca
+realtime/alerts.csv,live,boolean,false,,"false for RENFE alerts first seen before 2026-11-04T16:49Z, when that feed was frozen.",,false,true
+realtime/alert_targets.csv,alert_id,text,false,,Alert.,alerts.alert_id,false,fgc:INCIDENCE_AB_3322
+realtime/alert_targets.csv,route_id,text,true,,"Route (line) id, operator-prefixed (`renfe:...` or `fgc:...`).",routes.route_id,false,renfe:51T0001R1
+realtime/alert_targets.csv,station_id,text,true,,"Station id, operator-prefixed (`renfe:...` or `fgc:...`).",stations.station_id,false,fgc:AB
+realtime/alert_targets.csv,trip_id,text,true,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,false,fgc:6c4bdae202747640fd55c10d40|6f2dc7e404@2026-11-06
+realtime/occupancy.csv.gz,time,timestamptz,false,,"Minute, UTC, ISO 8601 with Z.",,true,2026-11-01T23:01:00Z
+realtime/occupancy.csv.gz,train_id,text,false,,Train id as in positions.train_id (Rodalies: the trip; long distance: the train number; FGC: the run). Not unique per day: group by trip_id for one run.,positions.train_id,true,fgc:625cdae602743e|612dc6e004
+realtime/occupancy.csv.gz,car,text,false,,"FGC car position code: `mi`, `ri`, `m1` or `m2`.",,true,m1
+realtime/occupancy.csv.gz,occupancy_pct,integer,false,%,Occupancy of the car.,,false,15
+realtime/occupancy.csv.gz,level,integer,false,,"FGC occupancy band (`tram`), 1 = low to 3 = high.",,false,1
+events/stops.csv.gz,stop_event_id,text,false,,`<train_id>:<start>`.,,true,fgc:624ddab200727612a612|1f28c4e006:2026-11-03T20:59:00Z
+events/stops.csv.gz,train_id,text,false,,Train id as in positions.train_id (Rodalies: the trip; long distance: the train number; FGC: the run). Not unique per day: group by trip_id for one run.,positions.train_id,false,fgc:624ddab200727612a612|1f28c4e006
+events/stops.csv.gz,trip_id,text,false,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,false,fgc:624ddab200727612a612|1f28c4e006@2026-11-03
+events/stops.csv.gz,kind,text,false,,`station` (within the station radius) or `line` (between stations).,,false,station
+events/stops.csv.gz,station_id,text,true,,"Station, when kind is `station`.",stations.station_id,false,fgc:BG
+events/stops.csv.gz,start,timestamptz,false,,"First minute stopped, UTC, ISO 8601 with Z.",,false,2026-11-03T20:59:00Z
+events/stops.csv.gz,end,timestamptz,false,,"Last minute stopped, UTC, ISO 8601 with Z. `end` is a reserved word in SQL: write ""end"".",,false,2026-11-03T21:03:00Z
+events/stops.csv.gz,duration_s,integer,false,s,end minus start.,,false,240
+events/stops.csv.gz,lat,double precision,false,degrees,"Latitude, WGS84 (SRID 4326), 6 decimals.",,false,41.789193
+events/stops.csv.gz,lon,double precision,false,degrees,"Longitude, WGS84 (SRID 4326), 6 decimals.",,false,0.814748
+events/stops.csv.gz,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,fgc
+events/stops.csv.gz,feed,text,false,,"Realtime feed the train comes from: `rodalies` (RENFE Cercanias/Rodalies feed, which also carries the regional lines), `ld` (RENFE long and medium distance feed) or `fgc` (FGC positions).",,false,fgc
+events/incidents.csv,incident_id,text,false,,`<type>:<n>`.,,true,alert:1
+events/incidents.csv,type,text,false,,"`unexpected_stop`, `cancellation` or `alert`. Alerts: every RENFE alert and FGC `INCIDENCE_*`; FGC `OBSERVATIONS_*` timetable notes are only in alerts.",,false,alert
+events/incidents.csv,start,timestamptz,false,,"Start, UTC, ISO 8601 with Z. Cancellations: the timetabled start of the trip.",,false,2026-11-01T23:00:00Z
+events/incidents.csv,end,timestamptz,false,,"End, UTC, ISO 8601 with Z. Cancellations: the timetabled end, which can be after the 5-day window. `end` is a reserved word in SQL: write ""end"".",,false,2026-11-04T16:48:00Z
+events/incidents.csv,operator,text,false,,Train operator: `renfe` or `fgc`.,,false,renfe
+events/incidents.csv,route_id,text,true,,"Route (line) id, operator-prefixed (`renfe:...` or `fgc:...`).",routes.route_id,false,renfe:7180179309VRX
+events/incidents.csv,trip_id,text,true,,"Run of a timetabled trip, `<operator>:<raw trip id>@<service date>` (see trips.trip_id).",trips.trip_id,false,renfe:1572212026-10-31@2026-11-02
+events/incidents.csv,train_id,text,true,,Train id as in positions.train_id (Rodalies: the trip; long distance: the train number; FGC: the run). Not unique per day: group by trip_id for one run.,positions.train_id,false,renfe:5105L77658R4
+events/incidents.csv,station_id,text,true,,"Station id, operator-prefixed (`renfe:...` or `fgc:...`).",stations.station_id,false,fgc:BO
+events/incidents.csv,lat,double precision,true,degrees,"Latitude, WGS84 (SRID 4326), 6 decimals.",,false,41.348561
+events/incidents.csv,lon,double precision,true,degrees,"Longitude, WGS84 (SRID 4326), 6 decimals.",,false,2.042856
+events/incidents.csv,details,text,false,,Human-readable explanation.,,false,Servei alternatiu per carretera en tot el seu recorregut.
+events/incidents.csv,related_alert_id,text,true,,"A live alert that matches the incident; for alerts, the alert itself.",alerts.alert_id,false,renfe:AVISO_518187
+events/incidents.csv,evidence,text,false,,"Why it is an incident: `positions` (unexpected stops), `feed_canceled` or `stops_skipped` (cancellations), `live` or `not_live` (alerts).",,false,not_live
+events/data_issues.csv.gz,time,timestamptz,false,,"Minute, UTC, ISO 8601 with Z.",,true,2026-11-01T23:00:00Z
+events/data_issues.csv.gz,train_id,text,true,,Train id as in positions.train_id (Rodalies: the trip; long distance: the train number; FGC: the run). Not unique per day: group by trip_id for one run. Empty for `failed_minute`.,positions.train_id,true,renfe:15064
+events/data_issues.csv.gz,issue,text,false,,"`station_fallback`, `spike`, `frozen`, `unexplained_jump`, `duplicate_merged`, `track_split` (the train reappeared too far away to be the same run: a new track starts, position kept) or `failed_minute`.",,true,duplicate_merged
+events/data_issues.csv.gz,original_lat,double precision,true,degrees,Latitude as published.,,false,41.392029
+events/data_issues.csv.gz,original_lon,double precision,true,degrees,Longitude as published.,,false,2.164656
+events/data_issues.csv.gz,fixed_lat,double precision,true,degrees,Latitude after fixing (as in positions). Empty when the row was dropped.,,false,41.113505
+events/data_issues.csv.gz,fixed_lon,double precision,true,degrees,Longitude after fixing. Empty when the row was dropped.,,false,1.225623
+events/data_issues.csv.gz,note,text,true,,"Explanation for `duplicate_merged`, `track_split` and `failed_minute`.",,false,same train is in the Rodalies feed on 2026-11-02; its 112...
+events/data_issues.csv.gz,feed,text,false,,"Realtime feed the train comes from: `rodalies` (RENFE Cercanias/Rodalies feed, which also carries the regional lines), `ld` (RENFE long and medium distance feed) or `fgc` (FGC positions). For `failed_minute`, the raw feed that could not be fetched.",,false,ld

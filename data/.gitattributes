@@ -1,0 +1,3 @@
+# Generated. Keep every file in data/ byte-identical on checkout: no line-ending conversion
+# (CSV files must keep \n endings, load.sh must stay LF for bash on Windows).
+* -text

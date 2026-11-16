@@ -1,0 +1,220 @@
+route_id,operator,service,short_name,long_name,color
+fgc:FV,fgc,fgc,FV,Funicular de Vallvidrera,0A57A3
+fgc:L12,fgc,fgc,L12,Sarrià - Reina Elisenda,B2AED3
+fgc:L6,fgc,fgc,L6,Barcelona Pl. Catalunya - Sarrià,797FBC
+fgc:L7,fgc,fgc,L7,Barcelona Pl. Catalunya - Av Tibidabo,B2600B
+fgc:L8,fgc,fgc,L8,Barcelona Pl. Espanya - Molí Nou,E274AA
+fgc:MM,fgc,fgc,MM,Cremallera Montserrat,000000
+fgc:R5,fgc,fgc,R5,Barcelona Pl. Espanya - Manresa,3DBFC3
+fgc:R50,fgc,fgc,R50,Barcelona Pl. Espanya- Manresa,00738A
+fgc:R53,fgc,fgc,R53,Barcelona Pl. Espanya - Manresa,3DBFC3
+fgc:R6,fgc,fgc,R6,Barcelona Pl. Espanya - Igualada,B3B3B3
+fgc:R60,fgc,fgc,R60,Barcelona Pl. Espanya - Igualada,5B5B5B
+fgc:R63,fgc,fgc,R63,Barcelona Pl. Espanya - Igualada,B3B3B3
+fgc:RL1,fgc,fgc,RL1,Lleida - La Pobla,FF8000
+fgc:RL2,fgc,fgc,RL2,Lleida - La Pobla,FF8000
+fgc:S1,fgc,fgc,S1,Barcelona Pl. Catalunya - Terrassa Nacions Unides,EF7900
+fgc:S2,fgc,fgc,S2,Barcelona Pl. Catalunya - Sabadell Parc del Nord,88BB0B
+fgc:S3,fgc,fgc,S3,Barcelona Pl. Espanya - Can Ros,4F868E
+fgc:S4,fgc,fgc,S4,Barcelona Pl. Espanya - Olesa de Montserrat,A78600
+fgc:S8,fgc,fgc,S8,Barcelona Pl. Espanya - Martorell Enllaç,49C0DE
+fgc:S9,fgc,fgc,S9,Barcelona Pl. Espanya - Quatre Camins,DF4661
+renfe:0404071300VRR,renfe,long_distance,REGIONAL,Zaragoza Delicias - Móra la Nova,F2F5F5
+renfe:0404071801AV006,renfe,long_distance,AVE,Zaragoza Delicias - Barcelona-Sants,F2F5F5
+renfe:0404071801GL023,renfe,long_distance,ALVIA,Zaragoza Delicias - Barcelona-Sants,F2F5F5
+renfe:0404078400GL023,renfe,long_distance,ALVIA,Zaragoza Delicias - Lleida-Pirineus,F2F5F5
+renfe:0404078400VRE,renfe,long_distance,REG.EXP.,Zaragoza Delicias - Lleida-Pirineus,F2F5F5
+renfe:0404078400VRR,renfe,long_distance,REGIONAL,Zaragoza Delicias - Lleida-Pirineus,F2F5F5
+renfe:0404079400VRE,renfe,long_distance,REG.EXP.,Zaragoza Delicias - Barcelona Estació de França,F2F5F5
+renfe:0430760000AV006,renfe,long_distance,AVE,Figueres-Vilafant - Madrid-Puerta de Atocha-Almudena Grandes,F2F5F5
+renfe:0430760911GL012,renfe,long_distance,EUROMED,Figueres-Vilafant - Alicante/Alacant-Terminal,F2F5F5
+renfe:0430765000GL012,renfe,long_distance,EUROMED,Figueres-Vilafant - València-Estació del Nord,F2F5F5
+renfe:0430771801AV008,renfe,long_distance,AVANT,Figueres-Vilafant - Barcelona-Sants,F2F5F5
+renfe:0430787089AV016,renfe,long_distance,AVE INT,Figueres-Vilafant - Marseille St Charles,F2F5F5
+renfe:0430787303AV016,renfe,long_distance,AVE INT,Figueres-Vilafant - Lyon Part Dieu,F2F5F5
+renfe:0500071801AV006,renfe,long_distance,AVE,Granada - Barcelona-Sants,F2F5F5
+renfe:0822371801GL023,renfe,long_distance,ALVIA,Vigo Urzaiz - Barcelona-Sants,F2F5F5
+renfe:1151171801GL023,renfe,long_distance,ALVIA,San Sebastián-Donostia - Barcelona-Sants,F2F5F5
+renfe:1151178400GL023,renfe,long_distance,ALVIA,San Sebastián-Donostia - Lleida-Pirineus,F2F5F5
+renfe:1320071801GL023,renfe,long_distance,ALVIA,Bilbao-Intermod. Abando Indalecio Prieto - Barcelona-Sants,F2F5F5
+renfe:1510071801GL023,renfe,long_distance,ALVIA,León - Barcelona-Sants,F2F5F5
+renfe:2210071801GL023,renfe,long_distance,ALVIA,Ourense - Barcelona-Sants,F2F5F5
+renfe:40T0013C6,renfe,rodalies,C6,Valencia Nord - Castello de la Plana,0D3386
+renfe:40T0014C6,renfe,rodalies,C6,Castello de la Plana - Valencia Nord,0D3386
+renfe:40T0015C6,renfe,rodalies,C6,Valencia Nord - Castello de la Plana,0D3386
+renfe:40T0016C6,renfe,rodalies,C6,Castello de la Plana - Valencia Nord,0D3386
+renfe:5050071801GL023,renfe,long_distance,ALVIA,Córdoba-Julio Anguita - Barcelona-Sants,F2F5F5
+renfe:5100371801AV006,renfe,long_distance,AVE,Sevilla-Santa Justa - Barcelona-Sants,F2F5F5
+renfe:51T0001R1,renfe,rodalies,R1,Molins de Rei - Maçanet-Massanes,7DBCEC
+renfe:51T0002R1,renfe,rodalies,R1,Maçanet-Massanes - Molins de Rei,7DBCEC
+renfe:51T0003R2N,renfe,rodalies,R2N,Aeroport - Maçanet-Massanes,D0DF00
+renfe:51T0004R2N,renfe,rodalies,R2N,Maçanet-Massanes - Aeroport,D0DF00
+renfe:51T0007R2S,renfe,rodalies,R2S,Sant Vicenc de Calders - Barcelona-Estació de França,146520
+renfe:51T0008R2S,renfe,rodalies,R2S,Barcelona-Estació de França - Sant Vicenc de Calders,146520
+renfe:51T0011R2S,renfe,rodalies,R2S,Sant Vicenc de Calders - Barcelona-Estació de França,146520
+renfe:51T0012R2S,renfe,rodalies,R2S,Barcelona-Estació de França - Sant Vicenc de Calders,146520
+renfe:51T0013R2,renfe,rodalies,R2,Sant Vicenc de Calders - Maçanet-Massanes,26A741
+renfe:51T0014R2,renfe,rodalies,R2,Maçanet-Massanes - Sant Vicenc de Calders,26A741
+renfe:51T0015R3,renfe,rodalies,R3,L'Hospitalet de Llobregat - Puigcerdà,E54A3C
+renfe:51T0016R3,renfe,rodalies,R3,Puigcerdà - L'Hospitalet de Llobregat,E54A3C
+renfe:51T0019R4,renfe,rodalies,R4,Sant Vicenc de Calders - Manresa,F7A30D
+renfe:51T0020R4,renfe,rodalies,R4,Manresa - Sant Vicenc de Calders,F7A30D
+renfe:51T0023R8,renfe,rodalies,R8,Martorell Central - Granollers Centre,88016A
+renfe:51T0024R8,renfe,rodalies,R8,Granollers Centre - Martorell Central,88016A
+renfe:51T0025R2,renfe,rodalies,R2,Sant Vicenc de Calders - Castelldefels,26A741
+renfe:51T0026R2,renfe,rodalies,R2,Castelldefels - Sant Vicenc de Calders,26A741
+renfe:51T0028R2,renfe,rodalies,R2,Barcelona-Sants - Sant Celoni,26A741
+renfe:51T0029R7,renfe,rodalies,R7,Barcelona-Fabra i Puig - Cerdanyola-Universitat,24A842
+renfe:51T0030R7,renfe,rodalies,R7,Cerdanyola-Universitat - Barcelona-Fabra i Puig,24A842
+renfe:51T0031R4,renfe,rodalies,R4,Terrassa Estació del Nord - Castellbisbal,F7A30D
+renfe:51T0033R3,renfe,rodalies,R3,Figaró - La Tor de Querol-Enveig,E54A3C
+renfe:51T0034R3,renfe,rodalies,R3,La Tor de Querol-Enveig - Figaró,E54A3C
+renfe:51T0039R3,renfe,rodalies,R3,Vic - Montcada Ripollet,E54A3C
+renfe:51T0040R3,renfe,rodalies,R3,Montcada Ripollet - Vic,E54A3C
+renfe:51T0045R3,renfe,rodalies,R3,La Molina - Ribes de Freser,E54A3C
+renfe:51T0046R3,renfe,rodalies,R3,Ribes de Freser - La Molina,E54A3C
+renfe:51T0047RL4,renfe,rodalies,RL4,Terrassa Estació del Nord - Lleida,F7A30D
+renfe:51T0048RL4,renfe,rodalies,RL4,Lleida - Terrassa Estació del Nord,F7A30D
+renfe:51T0093R11,renfe,regional,R11,Figueres - Barcelona-Sants,0069AA
+renfe:51T0094R11,renfe,regional,R11,Barcelona-Sants - Figueres,0069AA
+renfe:51T0097R15,renfe,regional,R15,Riba-roja d'Ebre - Caspe,978571
+renfe:51T0098R15,renfe,regional,R15,Caspe - Riba-roja d'Ebre,978571
+renfe:51T0099RL3,renfe,rodalies,RL3,Lleida - Cervera,B6AE33
+renfe:51T0100RL3,renfe,rodalies,RL3,Cervera - Lleida,B6AE33
+renfe:51T0101R14,renfe,regional,R14,La Plana-Picamoixons - Tarragona,6C60A8
+renfe:51T0102R14,renfe,regional,R14,Tarragona - La Plana-Picamoixons,6C60A8
+renfe:51T0103R16,renfe,regional,R16,Tortosa - Barcelona-Estació de França,B52B46
+renfe:51T0104R16,renfe,regional,R16,Barcelona-Estació de França - Tortosa,B52B46
+renfe:51T0106R16,renfe,regional,R16,-Ulldecona-Alcanar-La Sénia,B52B46
+renfe:51T0107R17,renfe,regional,R17,Salou-Port Aventura - Barcelona-Estació de França,F3B12E
+renfe:51T0108R17,renfe,regional,R17,Barcelona-Estació de França - Salou-Port Aventura,F3B12E
+renfe:51T0109RT2,renfe,rodalies,RT2,Salou-Port Aventura - Tarragona,F965DE
+renfe:51T0110RT2,renfe,rodalies,RT2,Tarragona - Salou-Port Aventura,F965DE
+renfe:51T0111RG1,renfe,rodalies,RG1,Maçanet-Massanes - Figueres,409EF5
+renfe:51T0112RG1,renfe,rodalies,RG1,Figueres - Maçanet-Massanes,409EF5
+renfe:51T0113R15,renfe,regional,R15,Cunit - Riba-roja d'Ebre,978571
+renfe:51T0114R15,renfe,regional,R15,Riba-roja d'Ebre - Cunit,978571
+renfe:51T0120R11,renfe,regional,R11,Girona - Barcelona-Sant Andreu,0069AA
+renfe:51T0123R15,renfe,regional,R15,Reus - Torredembarra,978571
+renfe:51T0124R15,renfe,regional,R15,Torredembarra - Reus,978571
+renfe:51T0127R3,renfe,rodalies,R3,Ripoll - La Garriga,E54A3C
+renfe:51T0128R3,renfe,rodalies,R3,La Garriga - Ripoll,E54A3C
+renfe:51T0137RT1,renfe,rodalies,RT1,La Plana-Picamoixons - Tarragona,39D4CC
+renfe:51T0138RT1,renfe,rodalies,RT1,Tarragona - La Plana-Picamoixons,39D4CC
+renfe:51T0139R13,renfe,regional,R13,Lleida - Vinaixa,146520
+renfe:51T0140R13,renfe,regional,R13,Vinaixa - Lleida,146520
+renfe:51T0163R15,renfe,regional,R15,-Mora la Nova,978571
+renfe:51T0164R15,renfe,regional,R15,Mora la Nova - ,978571
+renfe:51T0175R13,renfe,regional,R13,La Plana-Picamoixons - Sant Vicenc de Calders,146520
+renfe:51T0176R13,renfe,regional,R13,Sant Vicenc de Calders - La Plana-Picamoixons,146520
+renfe:51T0185R13,renfe,regional,R13,La Plana-Picamoixons - Lleida,146520
+renfe:51T0186R3,renfe,rodalies,R3,Granollers-Canovelles - Barcelona-Fabra i Puig,E54A3C
+renfe:51T0187R3,renfe,rodalies,R3,La Garriga - Ripoll,E54A3C
+renfe:51T0188R3,renfe,rodalies,R3,La Garriga - Barcelona-Fabra i Puig,E54A3C
+renfe:51T0189R3,renfe,rodalies,R3,Centelles - Vic,E54A3C
+renfe:51T0190R3,renfe,rodalies,R3,Centelles - Barcelona-Fabra i Puig,E54A3C
+renfe:51T0191R3,renfe,rodalies,R3,Vic - Centelles,E54A3C
+renfe:51T0192R3,renfe,rodalies,R3,Vic - Puigcerdà,E54A3C
+renfe:51T0193R3,renfe,rodalies,R3,Vic - La Tor de Querol-Enveig,E54A3C
+renfe:51T0194R3,renfe,rodalies,R3,Vic - Barcelona-Fabra i Puig,E54A3C
+renfe:51T0195R3,renfe,rodalies,R3,Ripoll - La Garriga,E54A3C
+renfe:51T0196R3,renfe,rodalies,R3,Planoles - La Molina,E54A3C
+renfe:51T0197R3,renfe,rodalies,R3,La Molina - Planoles,E54A3C
+renfe:51T0198R3,renfe,rodalies,R3,Puigcerdà - Vic,E54A3C
+renfe:51T0199R3,renfe,rodalies,R3,La Tor de Querol-Enveig - Vic,E54A3C
+renfe:51T0200R13,renfe,regional,R13,Lleida - La Plana-Picamoixons,146520
+renfe:51T0201R3,renfe,rodalies,R3,Barcelona-Fabra i Puig - Granollers-Canovelles,E54A3C
+renfe:51T0202R3,renfe,rodalies,R3,Barcelona-Fabra i Puig - La Garriga,E54A3C
+renfe:51T0203R3,renfe,rodalies,R3,Barcelona-Fabra i Puig - Centelles,E54A3C
+renfe:51T0204R3,renfe,rodalies,R3,Barcelona-Fabra i Puig - Vic,E54A3C
+renfe:5441371801AV006,renfe,long_distance,AVE,Málaga María Zambrano - Barcelona-Sants,F2F5F5
+renfe:6000004307AV006,renfe,long_distance,AVE,Madrid-Puerta de Atocha-Almudena Grandes - Figueres-Vilafant,F2F5F5
+renfe:6000071801AV006,renfe,long_distance,AVE,Madrid-Puerta de Atocha-Almudena Grandes - Barcelona-Sants,F2F5F5
+renfe:6000071801AV016,renfe,long_distance,AVE INT,Madrid-Puerta de Atocha-Almudena Grandes - Barcelona-Sants,F2F5F5
+renfe:6000078400AV006,renfe,long_distance,AVE,Madrid-Puerta de Atocha-Almudena Grandes - Lleida-Pirineus,F2F5F5
+renfe:6000087089AV016,renfe,long_distance,AVE INT,Madrid-Puerta de Atocha-Almudena Grandes - Marseille St Charles,F2F5F5
+renfe:6091171801GL012,renfe,long_distance,EUROMED,Alicante/Alacant-Terminal - Barcelona-Sants,F2F5F5
+renfe:6500004307GL012,renfe,long_distance,EUROMED,València-Estació del Nord - Figueres-Vilafant,F2F5F5
+renfe:6500065312VRR,renfe,long_distance,REGIONAL,València-Estació del Nord - Vinaròs,F2F5F5
+renfe:6500065400VRE,renfe,long_distance,REG.EXP.,València-Estació del Nord - Tortosa,F2F5F5
+renfe:6500065400VRR,renfe,long_distance,REGIONAL,València-Estació del Nord - Tortosa,F2F5F5
+renfe:6500071801GL012,renfe,long_distance,EUROMED,València-Estació del Nord - Barcelona-Sants,F2F5F5
+renfe:6500071801GL026,renfe,long_distance,Intercity,València-Estació del Nord - Barcelona-Sants,F2F5F5
+renfe:6500079400VRE,renfe,long_distance,REG.EXP.,València-Estació del Nord - Barcelona Estació de França,F2F5F5
+renfe:6531265000VRR,renfe,long_distance,REGIONAL,Vinaròs - València-Estació del Nord,F2F5F5
+renfe:6531279400VRE,renfe,long_distance,REG.EXP.,Vinaròs - Barcelona Estació de França,F2F5F5
+renfe:6540065000VRE,renfe,long_distance,REG.EXP.,Tortosa - València-Estació del Nord,F2F5F5
+renfe:6540065000VRR,renfe,long_distance,REGIONAL,Tortosa - València-Estació del Nord,F2F5F5
+renfe:6540071801AV008,renfe,long_distance,AVANT EXP,Tortosa - Barcelona-Sants,F2F5F5
+renfe:6540079400VRE,renfe,long_distance,REG.EXP.,Tortosa - Barcelona Estació de França,F2F5F5
+renfe:6541171500VRR,renfe,long_distance,REGIONAL,Salou-Port Aventura - Tarragona,F2F5F5
+renfe:6541179400VRE,renfe,long_distance,REG.EXP.,Salou-Port Aventura - Barcelona Estació de França,F2F5F5
+renfe:7120479400VRE,renfe,long_distance,REG.EXP.,Caspe - Barcelona Estació de França,F2F5F5
+renfe:7121079400VRE,renfe,long_distance,REG.EXP.,Flix - Barcelona Estació de França,F2F5F5
+renfe:7130004040VRR,renfe,long_distance,REGIONAL,Móra la Nova - Zaragoza Delicias,F2F5F5
+renfe:7130079400VRE,renfe,long_distance,REG.EXP.,Móra la Nova - Barcelona Estació de França,F2F5F5
+renfe:7140079400VRE,renfe,long_distance,REG.EXP.,Reus - Barcelona Estació de França,F2F5F5
+renfe:7150065411VRR,renfe,long_distance,REGIONAL,Tarragona - Salou-Port Aventura,F2F5F5
+renfe:7150078400VRR,renfe,long_distance,REGIONAL,Tarragona - Lleida-Pirineus,F2F5F5
+renfe:7180104040AV006,renfe,long_distance,AVE,Barcelona-Sants - Zaragoza Delicias,F2F5F5
+renfe:7180104040GL023,renfe,long_distance,ALVIA,Barcelona-Sants - Zaragoza Delicias,F2F5F5
+renfe:7180104307AV008,renfe,long_distance,AVANT,Barcelona-Sants - Figueres-Vilafant,F2F5F5
+renfe:7180105000AV006,renfe,long_distance,AVE,Barcelona-Sants - Granada,F2F5F5
+renfe:7180108223GL023,renfe,long_distance,ALVIA,Barcelona-Sants - Vigo Urzaiz,F2F5F5
+renfe:7180111511GL023,renfe,long_distance,ALVIA,Barcelona-Sants - San Sebastián-Donostia,F2F5F5
+renfe:7180113200GL023,renfe,long_distance,ALVIA,Barcelona-Sants - Bilbao-Intermod. Abando Indalecio Prieto,F2F5F5
+renfe:7180115100GL023,renfe,long_distance,ALVIA,Barcelona-Sants - León,F2F5F5
+renfe:7180122100GL023,renfe,long_distance,ALVIA,Barcelona-Sants - Ourense,F2F5F5
+renfe:7180150500GL023,renfe,long_distance,ALVIA,Barcelona-Sants - Córdoba-Julio Anguita,F2F5F5
+renfe:7180151003AV006,renfe,long_distance,AVE,Barcelona-Sants - Sevilla-Santa Justa,F2F5F5
+renfe:7180154413AV006,renfe,long_distance,AVE,Barcelona-Sants - Málaga María Zambrano,F2F5F5
+renfe:7180160000AV006,renfe,long_distance,AVE,Barcelona-Sants - Madrid-Puerta de Atocha-Almudena Grandes,F2F5F5
+renfe:7180160000AV016,renfe,long_distance,AVE INT,Barcelona-Sants - Madrid-Puerta de Atocha-Almudena Grandes,F2F5F5
+renfe:7180160911GL012,renfe,long_distance,EUROMED,Barcelona-Sants - Alicante/Alacant-Terminal,F2F5F5
+renfe:7180160911GL026,renfe,long_distance,Intercity,Barcelona-Sants - Alicante/Alacant-Terminal,F2F5F5
+renfe:7180165000GL012,renfe,long_distance,EUROMED,Barcelona-Sants - València-Estació del Nord,F2F5F5
+renfe:7180165000GL026,renfe,long_distance,Intercity,Barcelona-Sants - València-Estació del Nord,F2F5F5
+renfe:7180165400AV008,renfe,long_distance,AVANT EXP,Barcelona-Sants - Tortosa,F2F5F5
+renfe:7180178400AV008,renfe,long_distance,AVANT,Barcelona-Sants - Lleida-Pirineus,F2F5F5
+renfe:7180179300VRX,renfe,long_distance,MD,Barcelona-Sants - Girona,F2F5F5
+renfe:7180179309VRX,renfe,long_distance,MD,Barcelona-Sants - Figueres,F2F5F5
+renfe:7180179315VRR,renfe,long_distance,REGIONAL,Barcelona-Sants - Portbou,F2F5F5
+renfe:7180179315VRX,renfe,long_distance,MD,Barcelona-Sants - Portbou,F2F5F5
+renfe:7180179316VRR,renfe,long_distance,REGIONAL,Barcelona-Sants - Cerbère,F2F5F5
+renfe:7180180100GL026,renfe,long_distance,Intercity,Barcelona-Sants - Pamplona/Iruña,F2F5F5
+renfe:7180187303AV016,renfe,long_distance,AVE INT,Barcelona-Sants - Lyon Part Dieu,F2F5F5
+renfe:7310079400VRE,renfe,long_distance,REG.EXP.,La Plana-Picamoixons - Barcelona Estació de França,F2F5F5
+renfe:7840004040AV006,renfe,long_distance,AVE,Lleida-Pirineus - Zaragoza Delicias,F2F5F5
+renfe:7840004040VRE,renfe,long_distance,REG.EXP.,Lleida-Pirineus - Zaragoza Delicias,F2F5F5
+renfe:7840004040VRR,renfe,long_distance,REGIONAL,Lleida-Pirineus - Zaragoza Delicias,F2F5F5
+renfe:7840008223GL023,renfe,long_distance,ALVIA,Lleida-Pirineus - Vigo Urzaiz,F2F5F5
+renfe:7840060000AV006,renfe,long_distance,AVE,Lleida-Pirineus - Madrid-Puerta de Atocha-Almudena Grandes,F2F5F5
+renfe:7840071500VRE,renfe,long_distance,REG.EXP.,Lleida-Pirineus - Tarragona,F2F5F5
+renfe:7840071801AV008,renfe,long_distance,AVANT,Lleida-Pirineus - Barcelona-Sants,F2F5F5
+renfe:7840078500VRR,renfe,long_distance,REGIONAL,Lleida-Pirineus - Cervera,F2F5F5
+renfe:7840078600VRR,renfe,long_distance,REGIONAL,Lleida-Pirineus - Manresa,F2F5F5
+renfe:7840078700VRR,renfe,long_distance,REGIONAL,Lleida-Pirineus - Terrassa Estació del Nord,F2F5F5
+renfe:7840079400VRE,renfe,long_distance,REG.EXP.,Lleida-Pirineus - Barcelona Estació de França,F2F5F5
+renfe:7850078400VRR,renfe,long_distance,REGIONAL,Cervera - Lleida-Pirineus,F2F5F5
+renfe:7870078400VRR,renfe,long_distance,REGIONAL,Terrassa Estació del Nord - Lleida-Pirineus,F2F5F5
+renfe:7930071801VRX,renfe,long_distance,MD,Girona - Barcelona-Sants,F2F5F5
+renfe:7930371801VRX,renfe,long_distance,MD,Flaçà - Barcelona-Sants,F2F5F5
+renfe:7930971801VRX,renfe,long_distance,MD,Figueres - Barcelona-Sants,F2F5F5
+renfe:7931571801VRR,renfe,long_distance,REGIONAL,Portbou - Barcelona-Sants,F2F5F5
+renfe:7931571801VRX,renfe,long_distance,MD,Portbou - Barcelona-Sants,F2F5F5
+renfe:7931679315VRR,renfe,long_distance,REGIONAL,Cerbère - Portbou,F2F5F5
+renfe:7940004040VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Zaragoza Delicias,F2F5F5
+renfe:7940065000VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - València-Estació del Nord,F2F5F5
+renfe:7940065312VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Vinaròs,F2F5F5
+renfe:7940065400VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Tortosa,F2F5F5
+renfe:7940065411VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Salou-Port Aventura,F2F5F5
+renfe:7940071204VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Caspe,F2F5F5
+renfe:7940071210VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Flix,F2F5F5
+renfe:7940071300VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Móra la Nova,F2F5F5
+renfe:7940071400VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Reus,F2F5F5
+renfe:7940073100VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - La Plana-Picamoixons,F2F5F5
+renfe:7940078400VRE,renfe,long_distance,REG.EXP.,Barcelona Estació de França - Lleida-Pirineus,F2F5F5
+renfe:8708904307AV016,renfe,long_distance,AVE INT,Marseille St Charles - Figueres-Vilafant,F2F5F5
+renfe:8708960000AV016,renfe,long_distance,AVE INT,Marseille St Charles - Madrid-Puerta de Atocha-Almudena Grandes,F2F5F5
+renfe:8730304307AV016,renfe,long_distance,AVE INT,Lyon Part Dieu - Figueres-Vilafant,F2F5F5
+renfe:8730371801AV016,renfe,long_distance,AVE INT,Lyon Part Dieu - Barcelona-Sants,F2F5F5

@@ -1,0 +1,4 @@
+private/
+data/staging/
+__pycache__/
+.venv/
