@@ -12,6 +12,7 @@ dist/
 # Python
 __pycache__/
 .venv/
+.pytest_cache/
 
 # Dades (regles de la branca feature/data-etl)
 private/
