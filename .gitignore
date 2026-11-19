@@ -1,19 +1,18 @@
-# Default ignored files
-/shelf/
-/.idea/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Ignored default folder with query files
-/queries/
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-
-.idea
+# Configuració local i secrets
 .env
+
+# IDE i sistema
+.idea/
+.DS_Store
+
+# Node
 node_modules/
 dist/
+
+# Python
 __pycache__/
 .venv/
-data/*
-!data/.gitkeep
+
+# Dades (regles de la branca feature/data-etl)
+private/
+data/staging/
