@@ -16,3 +16,7 @@ __pycache__/
 # Dades (regles de la branca feature/data-etl)
 private/
 data/staging/
+private/
+data/staging/
+__pycache__/
+.venv/
