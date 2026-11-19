@@ -2,17 +2,28 @@ name: ocemt
 
 services:
   redis:
-    image: redis:7-alpine
+    image: redis:8.10.3
     ports:
-      - "${REDIS_PORT:-6379}:6379"
-    command: ["redis-server", "--appendonly", "yes"]
+      - "127.0.0.1:${REDIS_PORT:-6379}:6379"
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
     volumes:
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf:ro
       - redis-data:/data
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 3s
       retries: 5
+
+  redisinsight:
+    image: redis/redisinsight:3.10.1
+    ports:
+      - "127.0.0.1:${REDISINSIGHT_PORT:-5540}:5540"
+    volumes:
+      - redisinsight-data:/data
+    depends_on:
+      redis:
+        condition: service_healthy
 
   postgres:
     image: postgis/postgis:18-3.7
@@ -35,4 +46,5 @@ services:
 
 volumes:
   redis-data:
+  redisinsight-data:
   pg-data:
