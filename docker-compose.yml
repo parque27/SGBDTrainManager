@@ -1,0 +1,39 @@
+name: ocemt
+# Serveis
+services:
+  # REDIS
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # POSTGRES
+  postgres:
+    image: postgis/postgis:17-3.5
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      # Els atributs de .env
+      - POSTGRES_USER=${POSTGRES_USER}          # root
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}  # root
+      - POSTGRES_DB=${POSTGRES_DB}              # ocemt
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+# Volumess
+volumes:
+  redis-data:
+  pg-data:
