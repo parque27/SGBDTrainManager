@@ -1,3 +1,21 @@
+# Configuració local i secrets
+.env
+
+# IDE i sistema
+.idea/
+.DS_Store
+
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+.venv/
+
+# Dades (regles de la branca feature/data-etl)
+private/
+data/staging/
 private/
 data/staging/
 __pycache__/
