@@ -44,6 +44,36 @@ services:
       timeout: 3s
       retries: 10
 
+  backend:
+    build: ./backend
+    ports:
+      - "${BACKEND_PORT:-8080}:8000"
+    environment:
+      # Inside the compose network the databases are reached by service name and internal port.
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - CACHE_DEFAULT_TTL=${CACHE_DEFAULT_TTL:-300}
+      - WATCHFILES_FORCE_POLLING=true
+    # Development: the code is mounted and uvicorn reloads on every change.
+    volumes:
+      - ./backend:/app
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 volumes:
   redis-data:
   redisinsight-data:
