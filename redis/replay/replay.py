@@ -42,7 +42,6 @@ MADRID = ZoneInfo("Europe/Madrid")
 WAIT_S = 5  # cada cuánto se reintenta mientras Redis o Postgres no están listos
 
 TRAIN_TTL = 180  # s reales: red de seguridad, si el replay se para todo lo "en vivo" caduca solo
-GONE_AFTER = timedelta(minutes=3)  # simulados: un tren que lleva 3 minutos sin aparecer se borra
 DELAY_EVENT_S = 900  # a partir de 15 min de retraso se publica una incidencia
 TS_RETENTION_MS = 7 * 24 * 3600 * 1000
 HLL_TTL = 8 * 24 * 3600
@@ -231,7 +230,7 @@ class State:
     def __init__(self):
         self.line_keys: list[str] = []  # conjuntos line:… escritos en el minuto anterior
         self.delayed: set[str] = set()  # viajes que ya generaron incidencia de retraso
-        self.last_seen: dict[str, tuple[datetime, str]] = {}  # tren -> (último minuto en que salió, trip_id)
+        self.present: dict[str, str] = {}  # trenes escritos en el minuto anterior -> su trip_id
 
 
 def _number(value: str, kind):
@@ -308,21 +307,17 @@ def write_minute(r: redis.Redis, t: str, rows: list[dict], routes: dict, station
                 elif delay < DELAY_EVENT_S:
                     delayed.discard(row["trip_id"])
 
-    # Trenes que llevan más de 3 minutos simulados sin aparecer (o que son de antes de un salto): fuera.
-    # El TTL de los train:* va en segundos reales y la simulación va 30 veces más rápida, así que
-    # sin esto el índice tendría trenes que terminaron su viaje hace hora y media simulada.
-    last_seen = dict(state.last_seen)
-    for row in rows:
-        last_seen[row["train_id"]] = (when, row["trip_id"])
-    gone = [train for train, (seen, _) in last_seen.items() if abs(when - seen) > GONE_AFTER]
+    # Trenes del minuto anterior que ya no salen en este (o de antes de un salto): fuera. Así train:* y
+    # idx:trains tienen exactamente los trenes del minuto, igual que la foto y trains:geo. Esperar a que
+    # caduquen no vale: el TTL va en segundos reales y 180 s son hora y media simulada a x30.
+    present = {row["train_id"]: row["trip_id"] for row in rows}
+    gone = [train for train in state.present if train not in present]
     if gone:
         pipe.unlink(*[f"train:{train}" for train in gone])
-        trips_now = {row["trip_id"] for row in rows}
-        gone_trips = [last_seen[train][1] for train in gone if last_seen[train][1] not in ("", *trips_now)]
+        trips_now = set(present.values())
+        gone_trips = [state.present[train] for train in gone if state.present[train] not in ("", *trips_now)]
         if gone_trips:
             pipe.hdel("live:delays", *gone_trips)
-        for train in gone:
-            del last_seen[train]
 
     # Vistas "del minuto": se rehacen enteras
     pipe.delete("trains:geo", "trains:by_delay", *state.line_keys)
@@ -367,7 +362,7 @@ def write_minute(r: redis.Redis, t: str, rows: list[dict], routes: dict, station
     pipe.publish("ocemt:clock", t)
     pipe.execute()
     state.line_keys = list(by_line)
-    state.last_seen = last_seen
+    state.present = present
     if history:
         state.delayed = delayed
 
@@ -458,7 +453,7 @@ def run(r: redis.Redis, source, routes: dict, stations: dict, start: datetime, l
         try:
             if not redis_ok:
                 setup(r, stations)  # Redis ha vuelto: por si ha vuelto vacío. Deja los trenes a cero
-                state.line_keys, state.last_seen = [], {}
+                state.line_keys, state.present = [], {}
             started = time.perf_counter()
             write_minute(r, t, rows, routes, stations, state, meta, history=history)
         except REDIS_DOWN as exc:

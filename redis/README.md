@@ -13,6 +13,7 @@ y su documentación:
 | [`redis.conf`](redis.conf) | Configuración comentada: memoria, persistencia, diagnóstico. El compose la monta en el contenedor |
 | [`replay/`](replay/) | El replay: llena Redis con los trenes, minuto a minuto, leyendo de Postgres |
 | [`docs/modelo-de-claves.md`](docs/modelo-de-claves.md) | **Contrato con el backend**: qué claves hay, quién las escribe y quién las lee |
+| [`docs/recetario-backend.md`](docs/recetario-backend.md) | **Cómo leerlo desde el backend**: cada pantalla con su comando de Redis y código Python probado |
 | [`docs/tecnicas.md`](docs/tecnicas.md) | Qué funcionalidades de Redis usamos, por qué y cómo explicarlas |
 | [`demo/tour.sh`](demo/tour.sh) | Recorrido por todas las técnicas con datos reales |
 
@@ -108,7 +109,7 @@ redis/replay/.venv/bin/python redis/replay/replay.py --source csv
 ## Pendiente
 
 - [x] Replay leyendo de PostgreSQL, dentro del docker-compose.
-- [ ] Módulo Python para el backend con las lecturas (trenes en el mapa, panel de estación, cachés).
+- [x] Recetario para el backend (`docs/recetario-backend.md`), probado con su cliente.
 - [ ] Usuarios ACL `replay` y `backend` en un `users.acl` (ya probados, ver `docs/tecnicas.md` §6).
 - [ ] Probar `TS.CREATERULE` y los compact hashes (`HIMPORT`).
 - [ ] Benchmark Redis frente a Postgres (`docs/tecnicas.md` §8).

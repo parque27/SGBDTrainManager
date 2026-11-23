@@ -1,7 +1,8 @@
 # Modelo de claves de Redis
 
 Es el **contrato entre Redis y el backend**: qué hay en Redis, quién lo escribe y quién lo lee.
-Si alguien necesita una clave nueva, se añade aquí primero.
+Si alguien necesita una clave nueva, se añade aquí primero. **Cómo leer cada cosa desde el backend**
+(comandos y código Python probados): [`recetario-backend.md`](recetario-backend.md).
 
 ## Convenciones
 
@@ -30,11 +31,10 @@ Si alguien necesita una clave nueva, se añade aquí primero.
 | `line:{operador}:{línea}:trains` | Set | se sustituye cada minuto | replay | backend | Trenes de una línea ahora |
 | `live:delays` | Hash con TTL por campo | 180 s por campo | replay | backend | Retraso actual por `trip_id` (búsqueda origen → destino) |
 | `station:{station_id}` | Hash | — | carga inicial | `idx:stations` | Nombre y posición, para el buscador |
-| `station:{station_id}:departures` | Sorted Set | 120 s | backend | backend | Panel de salidas: miembro `trip_id`, puntuación = salida estimada (epoch s) |
 | `ts:delay:line:{operador}:{línea}` | TimeSeries | retención 7 días | replay | backend | Retraso medio por línea a lo largo del tiempo |
 | `hll:trains:{fecha}` | HyperLogLog | 8 días | replay | backend | Trenes distintos vistos en un día |
 | `events:trains` | Stream | `MAXLEN ~ 10000` | replay | worker de alertas, backend | Incidencias detectadas (retraso grande, parada larga) |
-| `cache:v1:{consulta}:{parámetros}` | String (JSON) | 1 h | backend | backend | Resultado de una consulta pesada a Postgres |
+| `cache:v1:{consulta}:{parámetros}` | String (JSON) | 1 h | backend | backend | Resultado de una consulta pesada a Postgres (p. ej. `cache:v1:departures:{station_id}:{fecha}`, el horario del día de una estación) |
 | `lock:{clave de caché}` | String | 5 s | backend | backend | Candado anti-estampida al rellenar una caché |
 | `ratelimit:api:{ip}` | String (`INCREX`) | 60 s | backend | backend | Límite de peticiones por IP |
 | canal `ocemt:clock` | Pub/Sub | — | replay | backend | Aviso de "hay minuto nuevo" para refrescar la web |
@@ -59,9 +59,11 @@ para que el backend lo tenga todo con un solo `HGETALL`).
 | `next_station`, `next_station_name` | `renfe:71801`, `Barcelona-Sants` | `positions.next_station_id` |
 | `time` | `2026-11-05T07:00:00Z` | `positions.time` |
 
-Un `train:*` dura mientras el tren salga en los datos: el replay lo borra cuando lleva **3 minutos
-simulados** sin aparecer. Los 180 s de caducidad son tiempo real y solo hacen de red de seguridad: si
-el replay se para, todo lo "en vivo" desaparece solo.
+Hay un `train:*` por cada tren **del minuto actual**, ni uno más: el replay borra en el momento los que
+dejan de salir en los datos. Así `idx:trains` cuenta lo mismo que la foto y `trains:geo`. Los 180 s de
+caducidad son tiempo real y solo hacen de red de seguridad: si el replay se para, todo lo "en vivo"
+desaparece solo. (En el 0,4 % de los casos un tren falta un minuto suelto en los datos: desaparece ese
+minuto y vuelve en el siguiente.)
 
 ### `sim:snapshot`: la foto del minuto
 
@@ -148,7 +150,7 @@ Lo hace [`replay/replay.py`](../replay/replay.py):
    Con `--source csv` las lee de los CSV de `data/realtime/positions`.
 2. Lo escribe todo en **una sola transacción** (`MULTI`/`EXEC`), enviada en un solo viaje de red (pipeline):
    - `HSET train:{id} …` + `HDEL` de los campos que ya no aplican + `EXPIRE … 180`, por cada tren.
-   - `UNLINK` de los trenes que llevan 3 minutos simulados sin aparecer.
+   - `UNLINK` de los trenes del minuto anterior que ya no salen.
    - Rehace `trains:geo`, `trains:by_delay` y los `line:…:trains` (`DEL` + `GEOADD`/`ZADD`/`SADD`).
    - `HSETEX live:delays EX 180 FIELDS …` con el retraso de cada viaje.
    - `TS.ADD` del retraso medio de cada línea y `PFADD hll:trains:{fecha}`.

@@ -38,8 +38,8 @@ desaparece solo del mapa, de las búsquedas y del índice. Nunca se enseña un d
 
 Ojo con el **tiempo simulado**: el TTL cuenta segundos reales y la simulación va 30 veces más rápida.
 180 s reales son 90 minutos simulados, así que un tren que termina su viaje seguiría en el índice hora y
-media. Por eso el replay borra él mismo (`UNLINK`) los trenes que llevan 3 minutos simulados sin aparecer,
-y el TTL queda como red de seguridad.
+media. Por eso el replay borra él mismo (`UNLINK`) los trenes del minuto anterior que ya no salen, y el
+TTL queda como red de seguridad.
 - `EXPIRE`/`TTL` a nivel de clave.
 - **TTL por campo** (Redis 7.4+, `HSETEX … EX 180 FIELDS …` y `HTTL`): `live:delays` es un único hash
   donde el retraso de cada viaje caduca por separado.
@@ -63,9 +63,11 @@ En Python: `pipe = r.pipeline(transaction=False)` … `pipe.execute()`.
 
 ### 3.4 Caché de Postgres (cache-aside)
 1. `GET cache:v1:…`. Si está, se devuelve.
-2. Si no: `SET lock:… NX PX 5000`. Solo el que consigue el candado consulta Postgres; los demás esperan
-   un momento y vuelven a mirar la caché. Así se evita la **estampida** (100 peticiones simultáneas =
-   100 consultas iguales).
+2. Si no: `SET lock:… <token> NX PX 5000`. Solo el que consigue el candado consulta Postgres; los demás
+   esperan un momento y vuelven a mirar la caché. Así se evita la **estampida** (100 peticiones
+   simultáneas = 100 consultas iguales). Probado: 20 a la vez → 1 consulta.
+   El candado se suelta con `DELEX lock:… IFEQ <token>` (Redis 8.4): solo lo borra si sigue siendo suyo,
+   por si la consulta tardó más de 5 s y el candado ya es de otro. Antes hacía falta un script de Lua.
 3. `SET cache:v1:… <json> EX 3600`.
 - La versión en la clave (`v1`) permite cambiar el formato sin tener que borrar nada a mano.
 - Con muchas claves que caducan a la vez conviene sumar al TTL unos segundos aleatorios (*jitter*).
@@ -75,7 +77,9 @@ En Python: `pipe = r.pipeline(transaction=False)` … `pipe.execute()`.
 mantiene solo con cada `HSET` o caducidad. Permite:
 - Filtros: `@line:{R2S} @delay_s:[900 +inf]`.
 - Geográficas: `@location:[lon lat 10 km]`.
-- Agregaciones tipo `GROUP BY`: `FT.AGGREGATE … GROUPBY 1 @line REDUCE AVG 1 @delay_s`.
+- Agregaciones tipo `GROUP BY`: `FT.AGGREGATE … GROUPBY 1 @line REDUCE AVG 1 @delay_s`. Ojo: si un grupo
+  no tiene ningún valor, `AVG` da `nan` y `SORTBY` deja de ordenar bien. Se filtra antes con
+  `@delay_s:[-inf +inf]` (solo documentos que tienen el campo).
 - Prefijos para autocompletar: `@name:Barc*`.
 
 Sin esto habría que mantener a mano un Set por cada filtro.
@@ -206,6 +210,7 @@ a la vez** y en que Redis ya tiene el "ahora" calculado. Hay que medirlo, no sup
 |---|---|
 | TTL por campo de hash (`HEXPIRE`, `HTTL`) | 7.4 |
 | `HSETEX`, `HGETDEL`; JSON, Query Engine, TimeSeries y Bloom incluidos de serie | 8.0 |
+| `DELEX … IFEQ` (borrar solo si el valor coincide) | 8.4 |
 | `XADD … IDMP/IDMPAUTO`, `HOTKEYS`, políticas `*-lrm` | 8.6 |
 | `INCREX`, notificaciones por campo de hash | 8.8 |
 | `SUNIONCARD`/`SDIFFCARD`, compact hashes + `HIMPORT`, `TS.NRANGE`/`TS.READ` | 8.10 |
