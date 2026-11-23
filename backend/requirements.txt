@@ -1,0 +1,9 @@
+fastapi==0.121.2
+uvicorn[standard]==0.38.0
+psycopg[binary,pool]==3.2.12
+pydantic-settings==2.12.0
+redis==7.0.1
+
+# tests
+pytest==8.4.2
+httpx==0.28.1
