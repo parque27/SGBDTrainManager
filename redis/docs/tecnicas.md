@@ -20,7 +20,8 @@ con `bash redis/demo/tour.sh`, que ejecuta cada ejemplo con datos reales (5-nov-
 | Estructura | En OCEMT | Comandos clave | Por qué esta y no otra |
 |---|---|---|---|
 | **String** | `sim:clock`, cachés JSON, candados, rate limit | `SET … EX/NX`, `GET`, `INCREX` | Valor único; con `NX` y `EX` sirve de candado y de caché |
-| **Hash** | `train:{id}`, `station:{id}` | `HSET`, `HGETALL`, `HSETEX` | Un objeto con campos: se lee entero o por campos. Compacto (`listpack`) |
+| **Hash** | `train:{id}`, `station:{id}`, `sim:control` | `HSET`, `HGETALL`, `HSETEX`, `HGETDEL` | Un objeto con campos: se lee entero o por campos. Compacto (`listpack`) |
+| **JSON** | `sim:snapshot` | `JSON.SET`, `JSON.GET … $.ruta` | Un documento con estructura (listas, objetos, números): se escribe de una vez y se lee entero o por partes con JSONPath |
 | **GEO** | `trains:geo` | `GEOADD`, `GEOSEARCH BYBOX/BYRADIUS` | Búsqueda por zona en O(log N). Por dentro es un Sorted Set con el geohash como puntuación |
 | **Sorted Set** | `trains:by_delay`, paneles de estación | `ZADD`, `ZRANGE … BYSCORE`, `ZREVRANGE`, `ZCOUNT` | Siempre ordenado por puntuación: rankings y "lo próximo a partir de ahora" |
 | **Set** | `line:renfe:R2S:trains` | `SADD`, `SMEMBERS`, `SUNIONCARD` | Pertenencia sin duplicados y operaciones de conjuntos |
@@ -32,8 +33,13 @@ con `bash redis/demo/tour.sh`, que ejecuta cada ejemplo con datos reales (5-nov-
 ## 3. Técnicas
 
 ### 3.1 La caducidad (TTL) como detector de datos viejos
-Cada `train:{id}` caduca a los 180 s. Si el feed deja de enviar un tren, desaparece solo del mapa,
-de las búsquedas y del índice. Nunca se enseña un dato viejo como si fuera actual.
+Cada `train:{id}`, `live:delays` y `sim:snapshot` caduca a los 180 s. Si el replay se para, lo "en vivo"
+desaparece solo del mapa, de las búsquedas y del índice. Nunca se enseña un dato viejo como si fuera actual.
+
+Ojo con el **tiempo simulado**: el TTL cuenta segundos reales y la simulación va 30 veces más rápida.
+180 s reales son 90 minutos simulados, así que un tren que termina su viaje seguiría en el índice hora y
+media. Por eso el replay borra él mismo (`UNLINK`) los trenes que llevan 3 minutos simulados sin aparecer,
+y el TTL queda como red de seguridad.
 - `EXPIRE`/`TTL` a nivel de clave.
 - **TTL por campo** (Redis 7.4+, `HSETEX … EX 180 FIELDS …` y `HTTL`): `live:delays` es un único hash
   donde el retraso de cada viaje caduca por separado.
@@ -45,6 +51,11 @@ En Python: `pipe = r.pipeline(transaction=False)` … `pipe.execute()`.
 
 ### 3.3 Atomicidad: MULTI/EXEC y cambio de minuto con RENAME
 - `MULTI … EXEC` ejecuta un bloque sin que se cuele ningún otro cliente en medio.
+- **Un solo comando ya es atómico**, porque Redis ejecuta los comandos de uno en uno. `JSON.SET sim:snapshot`
+  sustituye la foto entera de golpe: quien la lea ve la vieja o la nueva, nunca la mitad. Por eso no hace
+  falta el patrón "puntero" (`current` → `snapshot:{id}`), que se usa cuando la escritura se reparte entre
+  varias claves sin transacción. Aquí además la foto va dentro del mismo `MULTI` que los `train:*`, así que
+  todo es siempre del mismo minuto.
 - **Doble búfer**: el minuto nuevo se construye en `trains:geo:next` y `RENAME trains:geo:next trains:geo`
   lo sustituye de golpe. Quien lea ve el minuto anterior entero o el nuevo entero, nunca una mezcla.
 - Siguiente nivel (pendiente): una **Redis Function** en Lua que actualice un tren solo si su `time` es
@@ -68,6 +79,10 @@ mantiene solo con cada `HSET` o caducidad. Permite:
 - Prefijos para autocompletar: `@name:Barc*`.
 
 Sin esto habría que mantener a mano un Set por cada filtro.
+
+Limitación: los índices solo funcionan en la **base de datos 0** (`FT.CREATE` en otra responde
+`Cannot create index on db != 0`). Tampoco importa mucho: en Redis Cluster solo existe la 0, y lo
+recomendado es separar con prefijos de clave, no con números de base de datos.
 
 ### 3.6 Series temporales con retención
 - `RETENTION 604800000`: Redis borra solo las muestras de más de 7 días.
@@ -98,6 +113,22 @@ caducidad en un solo comando atómico. Responde `[valor, 1]` si se acepta y `[va
 `__keyevent@0__:expired` se sabe en el momento que un tren ha dejado de emitir. Redis 8.8 añade
 notificaciones por campo de hash.
 
+### 3.10 Controlar la simulación: estado deseado en un Hash
+El backend no le "manda órdenes" al replay: escribe **lo que quiere** en `sim:control`
+(`status paused`, `speed 60`) y el replay lo lee cada medio segundo y se adapta.
+- Si el replay está reiniciándose cuando el backend escribe, no se pierde nada: el Hash sigue ahí. Con
+  Pub/Sub, si nadie escucha en ese momento, el mensaje se pierde (3.7).
+- `seek` (saltar a una hora) es una orden de una sola vez. El replay la lee y la borra en un solo comando con
+  `HGETDEL sim:control FIELDS 1 seek` (Redis 8.0). Leer y luego borrar con dos comandos podría perder un
+  segundo `seek` que llegara justo en medio.
+
+### 3.11 Qué pasa si algo se cae
+| Se cae | Replay | Backend |
+|---|---|---|
+| Redis | No se para: el reloj sigue en su memoria y reintenta cada minuto. Al volver recarga estaciones e índices y escribe el minuto en el que va | Lo "en vivo" responde 503; las cachés tiran de Postgres (cache-aside) |
+| Postgres | Se reconecta y repite la consulta del mismo minuto | Lo "en vivo" sigue saliendo de Redis; las consultas a Postgres responden 503 |
+| El replay | Docker lo reinicia (`restart: unless-stopped`). Si no vuelve, a los 180 s caduca lo "en vivo" | No hay `sim:snapshot`: 503 en lo "en vivo" |
+
 ## 4. Configuración (`redis.conf`)
 
 | Opción | Valor | Por qué |
@@ -127,14 +158,18 @@ servicio con lo mínimo:
 
 ```
 ACL SETUSER replay on >*** resetkeys ~sim:* ~train:* ~trains:* ~line:* ~live:* ~ts:* ~hll:* ~events:*
-    resetchannels &ocemt:* -@all +@read +@write +@transaction +@pubsub +@timeseries +@hyperloglog +@stream -@dangerous
+    ~station:* ~stations:* resetchannels &ocemt:* -@all +@read +@write +@transaction +@pubsub +@timeseries
+    +@hyperloglog +@stream +@search +@json +@connection -@dangerous
 
-ACL SETUSER backend on >*** resetkeys %R~* ~cache:* ~lock:* ~ratelimit:*
-    resetchannels &ocemt:* -@all +@read +@write +@pubsub +@search +@timeseries -@dangerous
+ACL SETUSER backend on >*** resetkeys %R~* ~cache:* ~lock:* ~ratelimit:* ~sim:control
+    resetchannels &ocemt:* -@all +@read +@write +@pubsub +@search +@timeseries +@json +@connection -@dangerous
 ```
 
-Comprobado: `backend` lee trenes y escribe cachés, pero recibe `NOPERM` al escribir en `train:*` o al
-pedir `CONFIG`. `replay` escribe trenes pero no cachés. `%R~*` significa "puede leer cualquier clave".
+Comprobado con el replay funcionando con su usuario: `backend` lee la foto y los trenes, busca con
+`FT.SEARCH`, escribe cachés y `sim:control` (y el replay se pone en pausa), pero recibe `NOPERM` al
+escribir en `train:*` o `sim:clock` y al pedir `FLUSHALL`. `replay` escribe trenes pero no cachés.
+`%R~*` significa "puede leer cualquier clave". El replay necesita `station:*` y `+@search` porque al
+arrancar carga las estaciones y crea los índices.
 Pendiente: guardarlos en un `users.acl` y desactivar `default`.
 
 ## 7. Observar y enseñarlo
@@ -170,7 +205,7 @@ a la vez** y en que Redis ya tiene el "ahora" calculado. Hay que medirlo, no sup
 | Funcionalidad | Desde |
 |---|---|
 | TTL por campo de hash (`HEXPIRE`, `HTTL`) | 7.4 |
-| `HSETEX`; JSON, Query Engine, TimeSeries y Bloom incluidos de serie | 8.0 |
+| `HSETEX`, `HGETDEL`; JSON, Query Engine, TimeSeries y Bloom incluidos de serie | 8.0 |
 | `XADD … IDMP/IDMPAUTO`, `HOTKEYS`, políticas `*-lrm` | 8.6 |
 | `INCREX`, notificaciones por campo de hash | 8.8 |
 | `SUNIONCARD`/`SDIFFCARD`, compact hashes + `HIMPORT`, `TS.NRANGE`/`TS.READ` | 8.10 |
