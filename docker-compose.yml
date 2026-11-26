@@ -25,6 +25,20 @@ services:
       redis:
         condition: service_healthy
 
+  replay:
+    build: ./redis/replay
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      - REPLAY_START=${REPLAY_START:-2026-11-05T05:00:00Z}
+      - REPLAY_INTERVAL=${REPLAY_INTERVAL:-2}
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
   postgres:
     image: postgis/postgis:18-3.7
     platform: linux/amd64
