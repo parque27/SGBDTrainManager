@@ -25,7 +25,8 @@ con `bash redis/demo/tour.sh`, que ejecuta cada ejemplo con datos reales (5-nov-
 | **GEO** | `trains:geo` | `GEOADD`, `GEOSEARCH BYBOX/BYRADIUS` | Búsqueda por zona en O(log N). Por dentro es un Sorted Set con el geohash como puntuación |
 | **Sorted Set** | `trains:by_delay`, paneles de estación | `ZADD`, `ZRANGE … BYSCORE`, `ZREVRANGE`, `ZCOUNT` | Siempre ordenado por puntuación: rankings y "lo próximo a partir de ahora" |
 | **Set** | `line:renfe:R2S:trains` | `SADD`, `SMEMBERS`, `SUNIONCARD` | Pertenencia sin duplicados y operaciones de conjuntos |
-| **TimeSeries** | `ts:delay:line:{op}:{línea}` | `TS.CREATE … LABELS`, `TS.MADD`, `TS.RANGE … AGGREGATION`, `TS.MGET FILTER` | Muestras (tiempo, valor) con retención, agregación y filtro por etiquetas |
+| **List** | `trail:{train_id}` (estela) | `LPUSH`, `LTRIM`, `LRANGE` | Secuencia ordenada por llegada. Con `LPUSH` + `LTRIM 0 29` es una lista con tope: siempre las 30 últimas posiciones |
+| **TimeSeries** | `ts:delay:line:…` (media), `ts:delay_max:line:…` (máximo) | `TS.CREATE … LABELS`, `TS.MADD`, `TS.RANGE … AGGREGATION`, `TS.MGET FILTER` | Muestras (tiempo, valor) con retención, agregación y filtro por etiquetas |
 | **HyperLogLog** | `hll:trains:{fecha}` | `PFADD`, `PFCOUNT` | Cuenta elementos distintos con ≤ 12 KB y ~0,81 % de error |
 | **Stream** | `events:trains` | `XADD … IDMPAUTO`, `XREADGROUP`, `XACK`, `XPENDING` | Log persistente con grupos de consumidores y confirmación |
 | **Pub/Sub** | canal `ocemt:clock` | `PUBLISH`, `SUBSCRIBE` | Aviso instantáneo; si nadie escucha, se pierde (a diferencia de un Stream) |
@@ -81,6 +82,9 @@ mantiene solo con cada `HSET` o caducidad. Permite:
   no tiene ningún valor, `AVG` da `nan` y `SORTBY` deja de ordenar bien. Se filtra antes con
   `@delay_s:[-inf +inf]` (solo documentos que tienen el campo).
 - Prefijos para autocompletar: `@name:Barc*`.
+- Cálculos dentro de la consulta: `FT.AGGREGATE idx:trains "@next_station:{renfe\:71801}" … APPLY
+  "geodistance(@location, lon, lat)" AS distance_m SORTBY 2 @distance_m ASC` ordena los trenes que se
+  acercan a una estación por su distancia, sin sacarlos de Redis.
 
 Sin esto habría que mantener a mano un Set por cada filtro.
 
@@ -93,8 +97,12 @@ recomendado es separar con prefijos de clave, no con números de base de datos.
 - `TS.RANGE … AGGREGATION max 1800000` reduce la resolución al vuelo (máximo por media hora).
 - `TS.CREATERULE` (pendiente de probar) mantiene automáticamente una serie agregada, por ejemplo la
   media cada 5 minutos, para que las gráficas largas lean pocos puntos.
-- Las **etiquetas** (`LABELS operator renfe line R2S`) permiten pedir todas las líneas a la vez:
-  `TS.MGET FILTER metric=avg_delay`.
+- Las **etiquetas** (`LABELS metric avg_delay operator renfe line R2S service rodalies`) permiten pedir
+  muchas series a la vez y juntarlas: `TS.MRANGE … FILTER metric=max_delay service=rodalies GROUPBY metric
+  REDUCE max` da una sola curva con el retraso máximo de todos los rodalies. Es como un `GROUP BY` de SQL,
+  pero sobre series temporales.
+- Las etiquetas solo se ponen al crear la serie. Para añadir una nueva (como `service`) a las que ya
+  existen, el replay hace `TS.ALTER … LABELS …` al arrancar.
 
 ### 3.7 Mensajería: Pub/Sub frente a Streams
 | | Pub/Sub | Streams |

@@ -10,12 +10,12 @@ medidos ahí.
 
 | # | En la web | Endpoint sugerido | Redis | Medido |
 |---|---|---|---|---|
-| 1 | Mapa en vivo | `GET /live/snapshot` | `JSON.GET sim:snapshot` | 7 ms, ~75 KB |
+| 1 | Mapa en vivo (y filtros en el navegador) | `GET /live/snapshot` | `JSON.GET sim:snapshot` | 2 ms, ~75 KB |
 | 2 | Reloj, pausa, velocidad, ir a una hora | `GET /clock`, `POST /clock` | `JSON.GET … $.status`, `HSET sim:control` | |
 | 3 | Trenes cerca de un punto / en una zona | `GET /trains/near` | `GEOSEARCH trains:geo` | |
 | 4 | Los más retrasados | `GET /trains/delayed` | `ZRANGE trains:by_delay … REV` | |
 | 5 | Trenes de una línea | `GET /lines/{op}/{line}/trains` | `SMEMBERS line:…:trains` | |
-| 6 | Buscador, autocompletar estaciones, retraso por línea | `GET /trains/search`, `GET /stations/autocomplete`, `GET /stats/lines` | `FT.SEARCH`, `FT.AGGREGATE` | 2,6 ms |
+| 6 | Buscador y filtros (línea, operador, servicio, provincia), autocompletar estaciones, retraso por línea | `GET /trains/search`, `GET /stations/autocomplete`, `GET /stats/lines` | `FT.SEARCH`, `FT.AGGREGATE` | 2,6 ms |
 | 7 | Gráficas de retraso del día | `GET /stats/lines/{op}/{line}/delay` | `TS.RANGE`, `TS.MRANGE … GROUPBY` | |
 | 8 | Últimas incidencias / worker de alertas | `GET /incidents` | `XREVRANGE`, `XREADGROUP` + `XACK` | |
 | 9 | Trenes distintos hoy | `GET /stats/today` | `PFCOUNT hll:trains:{día}` | |
@@ -23,8 +23,29 @@ medidos ahí.
 | 11 | Consultas pesadas a Postgres | (todas) | caché + candado `SET NX PX` / `DELEX IFEQ` | 20 a la vez → 1 consulta |
 | 12 | Límite de peticiones | middleware | `INCREX` | |
 | 13 | Panel de salidas de una estación | `GET /stations/{id}/departures` | caché del horario + `HMGET live:delays` | 50 ms → 3 ms |
+| 14 | El meu tren: encontrarlo | `GET /trains/find?train_number=…` | `FT.SEARCH @train_number` / `@trip_id` | 0,5 ms |
+| 15 | Estela de un tren | `GET /trains/{id}/trail` | `LRANGE trail:{id}` | |
+| 16 | Incidencias activas | `GET /incidents/active` | `JSON.GET sim:incidents` | |
+| 17 | Gráfico de retraso medio y máximo, filtrable | `GET /stats/delay` | `TS.MRANGE … GROUPBY … REDUCE` | |
+| 18 | Trenes que se acercan a una estación | `GET /stations/{id}/approaching` | `FT.AGGREGATE … APPLY geodistance` | 0,9 ms |
+| 19 | Fiabilidad de un tren (% de días con retraso) | `GET /trains/{number}/reliability` | Postgres + caché | 155 ms → 0,4 ms |
+| 20 | Capa de vías | `GET /tracks` | Postgres + caché | 150 ms → 5 ms, 2,3 MB |
 
 Los nombres de los endpoints son una propuesta: los decide el backend.
+
+### Las historias de usuario y sus recetas
+
+| Historia | Recetas |
+|---|---|
+| El meu tren | 13 (salidas de la estación) → 14 (encontrar el tren) → 15 (estela) + 10 (seguirlo en vivo) |
+| Fiabilitat | 19 |
+| Filtre per servei | 1 (campo `service` de la foto, en el navegador) o 6 (`@service`) |
+| Filtre per província | 1 (campo `province`) o 6 (`@province`). Saldrán muchos trenes sin provincia hasta que exista `public.provinces` en Postgres |
+| Selecció de rutes | 1 (campo `line` de la foto) o 5/6 (`@line:{R1\|R2}`) |
+| Fitxa i estela | `HGETALL train:{id}` (receta 5, `with_details`) + 15 |
+| Incidències actives | 16 (oficiales) + 8 (las de retraso que detecta el replay) |
+| Gràfic de retards | 17 |
+| Vies i estacions | 20 (vías) + 18 (trenes que se acercan) + 13 (salidas) |
 
 ## Reglas generales
 
@@ -96,20 +117,21 @@ async def with_details(r: Redis, train_ids: list[str]) -> list[dict]:
 JSON.GET sim:snapshot
 ```
 
-La foto ya es JSON: se devuelve **tal cual, sin parsearla** (ni `json.loads` ni volver a serializar 75 KB).
-
 ```python
-async def snapshot_raw(r: Redis) -> str | None:
-    return await r.execute_command("JSON.GET", "sim:snapshot")
-
-
 @router.get("/live/snapshot")
 async def live_snapshot():
-    raw = await snapshot_raw(cache.get_redis())
-    if raw is None:
+    snapshot = await cache.get_redis().json().get("sim:snapshot")
+    if snapshot is None:
         raise HTTPException(503, "El replay no está funcionando (no hay sim:snapshot)")
-    return Response(raw, media_type="application/json")
+    return snapshot
 ```
+
+Medido: ~2 ms. Cada tren trae `line`, `operator`, `service` y `province`, así que los filtros de servicio,
+provincia o línea se pueden hacer en el navegador con la foto, sin pedir nada más.
+
+Ojo con redis-py: en cuanto se usa `r.json()` una vez, el cliente convierte **todas** las respuestas de
+`JSON.GET` en objetos Python, también las de `r.execute_command("JSON.GET", …)`. No intentes devolver el
+texto "tal cual": usa siempre `r.json().get()`.
 
 Formato: [`modelo-de-claves.md`](modelo-de-claves.md#simsnapshot-la-foto-del-minuto). Para no pedirla si
 no ha cambiado, el frontend puede comparar `snapshot_id`, o escuchar el aviso de la receta 10.
@@ -149,12 +171,15 @@ class ControlIn(BaseModel):
     seek: datetime | None = None                     # con zona: "2026-11-05T07:00:00Z"
 
 
-@router.post("/clock", status_code=204)
+@router.post("/clock", status_code=202)
 async def control_clock(body: ControlIn):
     await set_control(cache.get_redis(), body.status, body.speed, body.seek)
 ```
 
-- El replay mira `sim:control` cada medio segundo: tras un `POST`, en ≤ 0,5 s la foto ya dice el estado nuevo.
+- **202 (aceptado), no el estado nuevo**: el replay mira `sim:control` cada medio segundo, así que si se
+  lee la foto justo después del `HSET` aún dice lo de antes. En ≤ 0,5 s llega el aviso de la receta 10
+  con el `status` y la `speed` nuevos.
+- El reloj es compartido: si alguien pausa, se pausa para todos (hay un solo replay).
 - `seek` estando en pausa: salta a ese minuto y **sigue en pausa** (como un vídeo).
 - `range` de la foto da los límites para un selector de hora.
 
@@ -223,7 +248,14 @@ Los `train:*` y `station:*` están indexados (`idx:trains`, `idx:stations`): se 
 mantener un Set por cada filtro. `idx:trains` tiene exactamente los trenes del minuto actual (comprobado:
 229 en el índice, 229 en la foto).
 
+Campos del índice: `line`, `operator`, `service`, `movement`, `province`, `trip_id`, `train_number`,
+`station`, `next_station` (TAG); `delay_s` (NUMERIC); `location` (GEO); `next_station_name`, `headsign`
+(TEXT). Esquema completo en [`modelo-de-claves.md`](modelo-de-claves.md#índices-de-búsqueda).
+
 ```
+FT.SEARCH idx:trains "@service:{rodalies} @delay_s:[600 +inf]"          # rodalies con más de 10 min
+FT.SEARCH idx:trains "@province:{GIRONA}"
+FT.SEARCH idx:trains "@headsign:girona*"                                  # por destino
 FT.SEARCH idx:trains "@line:{R2S} @delay_s:[300 +inf]" SORTBY delay_s DESC LIMIT 0 20
 FT.SEARCH idx:trains "@operator:{fgc} @location:[2.17 41.387 3 km]"
 FT.SEARCH idx:stations "barc* sants*" RETURN 2 name operator LIMIT 0 10
@@ -234,13 +266,13 @@ FT.AGGREGATE idx:trains "@delay_s:[-inf +inf]" GROUPBY 2 @operator @line
 
 ```python
 async def search_trains(r: Redis, line: str | None = None, operator: str | None = None,
+                        service: str | None = None, province: str | None = None,
                         min_delay_s: int | None = None, near: tuple[float, float, float] | None = None,
                         limit: int = 20) -> dict:
     filters = []
-    if line:
-        filters.append(f"@line:{{{tag(line)}}}")
-    if operator:
-        filters.append(f"@operator:{{{tag(operator)}}}")
+    for field, value in (("line", line), ("operator", operator), ("service", service), ("province", province)):
+        if value:
+            filters.append(f"@{field}:{{{tag(value)}}}")
     if min_delay_s is not None:
         filters.append(f"@delay_s:[{int(min_delay_s)} +inf]")
     if near:
@@ -373,8 +405,10 @@ El día es el de Barcelona. Ocupa ≤ 12 KB por día, con ~0,8 % de error.
 
 ## 10. La web se actualiza sola (Pub/Sub → SSE)
 
-Cada vez que el replay escribe un minuto, publica la hora en `ocemt:clock`. El backend lo reenvía al
-navegador con *Server-Sent Events* y el navegador vuelve a pedir la foto.
+Cada vez que el replay reescribe la foto, publica en `ocemt:clock` un JSON pequeño:
+`{"simulated_at": "…", "status": "playing", "speed": 30, "snapshot_id": …}`. Llega en cada minuto nuevo, al
+momento cuando cambia la pausa o la velocidad, y cada 30 s en pausa. El backend lo reenvía tal cual al
+navegador con *Server-Sent Events*.
 
 ```python
 async def clock_events(r: Redis, is_disconnected):
@@ -399,7 +433,15 @@ async def live_events(request: Request):
 
 ```js
 // Frontend
-new EventSource("http://localhost:8080/live/events").onmessage = () => refreshMap();
+let lastMinute = null;
+new EventSource("http://localhost:8080/live/events").onmessage = (event) => {
+  const msg = JSON.parse(event.data);           // {simulated_at, status, speed, snapshot_id}
+  updateClock(msg);                             // reloj y botones de pausa/velocidad
+  if (msg.simulated_at !== lastMinute) {        // en pausa llega cada 30 s con el mismo minuto
+    lastMinute = msg.simulated_at;
+    refreshMap();                               // GET /live/snapshot
+  }
+};
 ```
 
 Ojo: con `async for … in pubsub.listen()`, el `socket_timeout=2` del cliente da error cuando pasan 2 s sin
@@ -518,3 +560,200 @@ async def departures(r: Redis, station_id: str, limit: int = 10) -> dict:
 - `delay_s: null` = ese viaje no tiene dato en vivo ahora (aún no ha empezado o ya ha terminado).
 - Por eso no hay una clave `station:{id}:departures`: un Sorted Set con las salidas estimadas habría que
   rehacerlo cada minuto. Así, lo que no cambia se cachea y lo que cambia se lee en el momento.
+
+---
+
+## 14. El meu tren: encontrar el tren
+
+El usuario conoce el **número de tren** (el que sale en los paneles de la estación) o lo elige en el
+panel de salidas (receta 13), que da el `trip_id`. Con cualquiera de los dos, el buscador da el tren.
+
+```
+FT.SEARCH idx:trains "@train_number:{00438}" LIMIT 0 1
+FT.SEARCH idx:trains "@trip_id:{renfe\:5108J25500R2S\@2026\-11\-05}" LIMIT 0 1
+```
+
+```python
+def doc_to_dict(doc) -> dict:
+    return {"train_id": doc.id.removeprefix("train:"),
+            **{k: v for k, v in vars(doc).items() if k not in ("id", "payload")}}
+
+
+async def find_train(r: Redis, train_number: str | None = None, trip_id: str | None = None) -> dict | None:
+    query = f"@train_number:{{{tag(train_number)}}}" if train_number else f"@trip_id:{{{tag(trip_id)}}}"
+    res = await r.ft("idx:trains").search(Query(query).paging(0, 1))
+    return doc_to_dict(res.docs[0]) if res.docs else None
+```
+
+- `None` = ese tren no circula en este minuto (aún no ha salido o ya ha llegado).
+- Para seguirlo: con el aviso de la receta 10, en cada minuto nuevo, `HGETALL train:{train_id}` y su
+  estela (receta 15). Los trenes de FGC no tienen número: con ellos, por `trip_id`.
+- Probado: 0,5 ms.
+
+## 15. Estela de un tren
+
+```
+LRANGE trail:renfe:00438 0 -1          # hasta 30 posiciones, la más nueva primero
+```
+
+```python
+async def train_trail(r: Redis, train_id: str) -> list[dict]:
+    """Últimas posiciones (hasta 30 minutos simulados), de la más antigua a la más nueva."""
+    points = await r.lrange(f"trail:{train_id}", 0, -1)
+    return [{"lon": float(lon), "lat": float(lat), "time": t}
+            for lon, lat, t in (p.split(",") for p in reversed(points))]
+```
+
+Lista vacía = el tren acaba de aparecer, o la simulación acaba de saltar (las estelas empiezan de cero
+para no unir puntos de horas distintas).
+
+## 16. Incidencias activas
+
+```
+JSON.GET sim:incidents                                           # todas las activas en el minuto
+JSON.GET sim:incidents '$.incidents[?(@.type=="cancellation")]'  # solo un tipo
+```
+
+```python
+async def active_incidents(r: Redis, type_: str | None = None) -> list[dict]:
+    """type_: "cancellation", "alert" o "unexpected_stop"; None = todas."""
+    path = f'$.incidents[?(@.type=="{type_}")]' if type_ else "$.incidents[*]"
+    return await r.json().get("sim:incidents", path) or []
+```
+
+- Formato: [`modelo-de-claves.md`](modelo-de-claves.md#simincidents-incidencias-activas). Es del mismo
+  minuto que la foto.
+- Probado: a las 09:13 del 5-nov hay 22 activas (10 avisos y 12 cancelaciones).
+- Para el interruptor de la web: con las incidencias apagadas, simplemente no se pide.
+- Las de retraso que detecta el replay (más de 15 min) están en el stream de la receta 8.
+
+## 17. Gráfico de retraso medio y máximo, filtrable
+
+Cada línea tiene dos series: la media (`metric=avg_delay`) y el máximo (`metric=max_delay`). Las dos
+llevan las etiquetas `operator`, `line` y `service`. `TS.MRANGE` las junta en una sola curva con
+`GROUPBY` + `REDUCE`, filtrando por las etiquetas que se quieran.
+
+```
+TS.MRANGE <inicio del día> <ahora> AGGREGATION avg 900000 FILTER metric=avg_delay service=rodalies GROUPBY metric REDUCE avg
+TS.MRANGE <inicio del día> <ahora> AGGREGATION max 900000 FILTER metric=max_delay service=rodalies GROUPBY metric REDUCE max
+```
+
+```python
+async def delay_chart(r: Redis, service: str | None = None, operator: str | None = None,
+                      line: str | None = None, bucket_min: int = 15) -> dict:
+    now = await sim_now(r)
+    start = datetime.combine(now.astimezone(MADRID).date(), time.min, MADRID)
+    labels = [f"{k}={v}" for k, v in (("service", service), ("operator", operator), ("line", line)) if v]
+    out = {}
+    for metric, reduce in (("avg_delay", "avg"), ("max_delay", "max")):
+        res = await r.ts().mrange(int(start.timestamp() * 1000), int(now.timestamp() * 1000),
+                                  filters=[f"metric={metric}", *labels],
+                                  aggregation_type=reduce, bucket_size_msec=bucket_min * 60_000,
+                                  groupby="metric", reduce=reduce)
+        points = next(iter(res[0].values()))[1] if res else []
+        out[metric] = [{"time": iso(datetime.fromtimestamp(ms / 1000, timezone.utc)), "delay_s": round(v)}
+                       for ms, v in points]
+    return out
+```
+
+- Devuelve `{"avg_delay": [...], "max_delay": [...]}`, un punto cada 15 min, desde la medianoche
+  (de Barcelona) hasta `sim:clock`.
+- La "media" de varias líneas es la media de sus medias (no pesa por número de trenes). Para el máximo
+  da igual: es el máximo de los máximos.
+- Probado con todo, con `service=rodalies` y con una línea con espacio (`line=AVANT EXP`).
+
+## 18. Trenes que se acercan a una estación
+
+Los trenes cuya **próxima estación** es esa, ordenados por distancia. La distancia la calcula Redis
+dentro de la agregación (`APPLY geodistance`).
+
+```
+FT.AGGREGATE idx:trains "@next_station:{renfe\:71801}"
+    LOAD 5 @__key @line @headsign @delay_s @location
+    APPLY "geodistance(@location, 2.141017, 41.379863)" AS distance_m
+    SORTBY 2 @distance_m ASC LIMIT 0 10
+```
+
+```python
+async def approaching(r: Redis, station_id: str, limit: int = 10) -> list[dict]:
+    location = await r.hget(f"station:{station_id}", "location")
+    if location is None:
+        return []
+    lon, lat = location.split(",")
+    req = (AggregateRequest(f"@next_station:{{{tag(station_id)}}}")
+           .load("@__key", "@line", "@headsign", "@delay_s", "@location")
+           .apply(distance_m=f"geodistance(@location, {lon}, {lat})")
+           .sort_by(Asc("@distance_m"))
+           .limit(0, limit))
+    res = await r.ft("idx:trains").aggregate(req)
+    rows = [dict(zip(row[::2], row[1::2])) for row in res.rows]
+    return [{"train_id": row.pop("__key").removeprefix("train:"), **row} for row in rows]
+```
+
+(`from redis.commands.search.aggregation import AggregateRequest, Asc`.) Probado en Barcelona-Sants:
+0,9 ms. Junto con el panel de salidas (receta 13) da la ficha completa de la estación.
+
+## 19. Fiabilidad: % de días con retraso (Postgres + caché)
+
+Es una pregunta sobre el **pasado**, así que la responde Postgres (`trip_delays` + `trips.train_number`).
+Redis la guarda en caché (receta 11): el resultado no cambia en todo el día simulado.
+
+```python
+RELIABILITY_SQL = """
+    SELECT count(*) AS days,
+           count(*) FILTER (WHERE max_delay_s > %(threshold_s)s) AS delayed_days
+    FROM (SELECT t.service_date, max(d.delay_s) AS max_delay_s
+          FROM public.trips t
+          JOIN public.trip_delays d ON d.trip_id = t.trip_id
+          WHERE t.train_number = %(train_number)s
+            AND t.service_date >= %(today)s - %(days)s::int AND t.service_date < %(today)s
+          GROUP BY t.service_date) AS per_day"""
+
+
+async def reliability(r: Redis, train_number: str, days: int = 4, threshold_s: int = 300) -> dict:
+    today = (await sim_now(r)).astimezone(MADRID).date()
+    row, source = await cache.get_or_set(
+        f"cache:v1:reliability:{train_number}:{today}:{days}:{threshold_s}",
+        lambda: db.fetch_one(RELIABILITY_SQL, {"train_number": train_number, "today": today,
+                                               "days": days, "threshold_s": threshold_s}),
+        ttl=3600)
+    pct = round(100 * row["delayed_days"] / row["days"]) if row["days"] else None
+    return {"train_number": train_number, "days_with_data": row["days"],
+            "delayed_days": row["delayed_days"], "pct_delayed": pct}
+```
+
+- "Con retraso" = en algún momento del viaje pasó de `threshold_s` (5 min por defecto): a acordar con el
+  equipo.
+- Solo hay 5 días de datos (2–6 nov): `days` como mucho 4 (los anteriores al día simulado).
+- La consulta es una propuesta: la puede afinar quien lleva Postgres (por ejemplo, en una vista).
+- Probado con el tren 00438: 3 días con datos, los 3 con retraso. 155 ms la primera vez, 0,4 ms desde
+  la caché.
+
+## 20. Capa de vías (Postgres + caché)
+
+Las vías (`public.tracks`, 9.774 tramos de OpenStreetMap) no cambian: Postgres monta el GeoJSON una vez,
+simplificado, y Redis lo guarda 24 h. Se guarda y se devuelve como texto, sin volver a parsearlo.
+
+```python
+TRACKS_SQL = """
+    SELECT json_build_object('type', 'FeatureCollection', 'features', coalesce(json_agg(json_build_object(
+        'type', 'Feature',
+        'geometry', ST_AsGeoJSON(ST_Simplify(geom, %(tolerance)s), 5)::json,
+        'properties', json_build_object('way_id', way_id, 'name', name, 'usage', usage,
+                                        'maxspeed_kmh', maxspeed_kmh)
+    )), '[]'::json))::text AS geojson
+    FROM public.tracks"""
+
+
+@router.get("/tracks")
+async def tracks(tolerance: float = 0.0002):
+    r, key = cache.get_redis(), f"cache:v1:tracks:{tolerance}"
+    geojson = await r.get(key)
+    if geojson is None:
+        geojson = (await db.fetch_one(TRACKS_SQL, {"tolerance": tolerance}))["geojson"]
+        await r.set(key, geojson, ex=24 * 3600)
+    return Response(geojson, media_type="application/geo+json")
+```
+
+Probado: 2,3 MB; 150 ms la primera vez (Postgres) y 5 ms desde la caché. (Aquí sí se puede devolver el
+texto tal cual: es un `GET` normal, no `JSON.GET`.)
