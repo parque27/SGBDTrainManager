@@ -13,6 +13,7 @@ import logging
 from collections.abc import Awaitable, Callable
 from typing import Any, Literal
 
+from fastapi.encoders import jsonable_encoder
 from redis.asyncio import Redis
 from redis.exceptions import RedisError
 
@@ -30,6 +31,9 @@ async def open_redis(settings: Settings) -> None:
     global _redis, _default_ttl
     _redis = Redis.from_url(
         settings.redis_url,
+        # Redis ACL user (redis/docs/tecnicas.md §6). Empty = no ACL yet: connect without a user.
+        username=settings.redis_username or None,
+        password=settings.redis_password or None,
         decode_responses=True,
         socket_connect_timeout=2,
         socket_timeout=2,
@@ -64,10 +68,13 @@ async def get_or_set(
     except RedisError as exc:
         log.warning("Redis read failed for %s, falling back to PostgreSQL: %s", key, exc)
 
-    value = await loader()
+    # Encode once, the same way FastAPI does, and return that same value: otherwise a MISS returns
+    # datetime/Decimal objects (FastAPI writes "2026-11-05T07:00:00+00:00", numbers) while a HIT returns
+    # whatever json.dumps stored, and the two responses differ.
+    value = jsonable_encoder(await loader())
 
     try:
-        await redis.set(key, json.dumps(value, default=str), ex=ttl or _default_ttl)
+        await redis.set(key, json.dumps(value), ex=ttl or _default_ttl)
     except RedisError as exc:
         log.warning("Redis write failed for %s: %s", key, exc)
 

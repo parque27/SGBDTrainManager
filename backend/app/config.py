@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     redis_host: str = "localhost"
     redis_port: int = 6379
     redis_db: int = 0
+    redis_username: str = ""  # ACL user `backend`; empty until ACL is enabled (KAN-11)
+    redis_password: str = ""
     cache_default_ttl: int = 300  # seconds
 
     # Frontend origins allowed to call the API
