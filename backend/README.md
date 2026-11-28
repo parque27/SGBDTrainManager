@@ -1,6 +1,6 @@
 # OCEMT backend (FastAPI)
 
-Python server between the web app and the databases.
+Python server between the web app and the databases. Design and endpoint plan: [docs/design.md](docs/design.md).
 
 ```
 Web ──► FastAPI ──► Redis (cache, read first)

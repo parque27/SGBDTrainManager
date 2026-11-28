@@ -75,3 +75,19 @@ def test_redis_down_falls_back_to_loader(fake):
 
     assert (value, source) == ({"a": 1}, "database")
     assert calls["n"] == 1
+
+
+def test_miss_and_hit_return_the_same_json(fake):
+    """Dates and Decimals from PostgreSQL must look the same whether they come from the DB or from Redis."""
+    from datetime import datetime, timezone
+    from decimal import Decimal
+
+    fake()
+    row = {"time": datetime(2026, 11, 5, 7, 0, tzinfo=timezone.utc), "pct": Decimal("97.50")}
+    loader, _ = counting_loader([row])
+
+    miss, _ = asyncio.run(cache.get_or_set("k", loader))
+    hit, source = asyncio.run(cache.get_or_set("k", loader))
+
+    assert source == "cache"
+    assert miss == hit == [{"time": "2026-11-05T07:00:00+00:00", "pct": 97.5}]

@@ -61,7 +61,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "${BACKEND_PORT:-8080}:8000"
+      - "127.0.0.1:${BACKEND_PORT:-8080}:8000"
     environment:
       # Inside the compose network the databases are reached by service name and internal port.
       - POSTGRES_HOST=postgres
@@ -71,6 +71,9 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      # Redis ACL user (KAN-11). Empty password = ACL not enabled: connect without a user.
+      - REDIS_USERNAME=${REDIS_BACKEND_PASSWORD:+backend}
+      - REDIS_PASSWORD=${REDIS_BACKEND_PASSWORD:-}
       - CACHE_DEFAULT_TTL=${CACHE_DEFAULT_TTL:-300}
       - WATCHFILES_FORCE_POLLING=true
     # Development: the code is mounted and uvicorn reloads on every change.
