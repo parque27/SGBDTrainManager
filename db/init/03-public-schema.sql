@@ -244,3 +244,66 @@ ON CONFLICT (trip_id, stop_sequence) DO NOTHING;
 
 CREATE INDEX IF NOT EXISTS idx_stop_times_station ON public.stop_times (station_id);
 CREATE INDEX IF NOT EXISTS idx_stop_times_trip ON public.stop_times (trip_id);
+
+
+-- 10. ÍNDEX PER AL PANELL DE SORTIDES D'ESTACIONS
+CREATE INDEX IF NOT EXISTS idx_stop_times_station_departure 
+ON public.stop_times (station_id, departure_time);
+
+
+-- 11. FUNCIÓ DE FIABILITAT PER NÚMERO DE TREN (últims X dies, màx 4)
+CREATE OR REPLACE FUNCTION public.train_reliability(
+    p_train_number VARCHAR,
+    p_dias INTEGER DEFAULT 4
+)
+RETURNS TABLE (
+    train_number VARCHAR,
+    dies_analitzats INTEGER,
+    total_observacions BIGINT,
+    observacions_amb_retard BIGINT,
+    percentatge_retard NUMERIC(5,2),
+    percentatge_puntualitat NUMERIC(5,2)
+)
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_dias INTEGER := LEAST(GREATEST(COALESCE(p_dias, 4), 1), 4);
+    v_max_date DATE;
+BEGIN
+    SELECT MAX(service_date) INTO v_max_date FROM public.trips;
+
+    RETURN QUERY
+    WITH dades_filtrades AS (
+        SELECT
+            t.train_number,
+            td.delay_s,
+            td.on_time,
+            CASE 
+                WHEN td.delay_s IS NOT NULL THEN (td.delay_s > 300)
+                WHEN td.on_time IS NOT NULL THEN (NOT td.on_time)
+                ELSE FALSE
+            END AS es_retard
+        FROM public.trips t
+        JOIN public.trip_delays td ON t.trip_id = td.trip_id
+        WHERE t.train_number = p_train_number
+          AND t.service_date > (v_max_date - v_dias)
+    )
+    SELECT
+        p_train_number AS train_number,
+        v_dias AS dies_analitzats,
+        COUNT(*) AS total_observacions,
+        COUNT(*) FILTER (WHERE es_retard) AS observacions_amb_retard,
+        ROUND(
+            COALESCE(COUNT(*) FILTER (WHERE es_retard)::NUMERIC / NULLIF(COUNT(*), 0) * 100, 0),
+            2
+        ) AS percentatge_retard,
+        ROUND(
+            COALESCE(COUNT(*) FILTER (WHERE NOT es_retard)::NUMERIC / NULLIF(COUNT(*), 0) * 100, 0),
+            2
+        ) AS percentatge_puntualitat
+    FROM dades_filtrades;
+END;
+$$;
+
+
+
